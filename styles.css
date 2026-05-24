@@ -159,11 +159,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); text-transform: uppercase; fo
    ========================================================================= */
 
 .theme-toggle-btn {
-  display: flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 0 1.5rem; height: 44px; border-radius: 100px;
   background: var(--glass); border: 1px solid var(--glass-border);
   color: var(--text); cursor: none; transition: background 0.3s, border-color 0.3s, transform 0.3s, color 0.3s;
   flex-shrink: 0;
+  font-family: monospace; font-size: 0.85rem; font-weight: bold; letter-spacing: 0.1em;
 }
 .theme-toggle-btn:hover {
   background: rgba(255, 255, 255, 0.08);
