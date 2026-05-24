@@ -2,6 +2,43 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Theme Toggler Logic
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+
+  // Initialize theme from localStorage
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  if (currentTheme === 'light') {
+    document.body.classList.add('light-theme');
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    }
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      
+      let theme = 'dark';
+      if (document.body.classList.contains('light-theme')) {
+        theme = 'light';
+        if (sunIcon && moonIcon) {
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        }
+      } else {
+        if (sunIcon && moonIcon) {
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        }
+      }
+      localStorage.setItem('theme', theme);
+      updateThreeTheme();
+    });
+  }
+
   // 1. Preloader Removal
   setTimeout(() => {
     gsap.to('.preloader', {
@@ -164,6 +201,11 @@ function initThreeJS() {
     depthWrite: false
   });
 
+  window.threePointsMaterial = material;
+  if (typeof updateThreeTheme === 'function') {
+    updateThreeTheme();
+  }
+
   const points = new THREE.Points(geometry, material);
   scene.add(points);
 
@@ -231,4 +273,14 @@ function initThreeJS() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
+}
+
+function updateThreeTheme() {
+  const material = window.threePointsMaterial;
+  if (!material) return;
+  if (document.body.classList.contains('light-theme')) {
+    material.opacity = 0.35;
+  } else {
+    material.opacity = 0.70;
+  }
 }
