@@ -20,6 +20,7 @@
   --glass-border: rgba(255, 255, 255, 0.08);
   
   --nav-bg: rgba(5, 5, 5, 0.4);
+  --nav-bg-scrolled: rgba(5, 5, 5, 0.85);
 }
 
 /* Light Theme Variables */
@@ -30,6 +31,7 @@ body.light-theme {
   --glass: rgba(0, 0, 0, 0.02);
   --glass-border: rgba(0, 0, 0, 0.08);
   --nav-bg: rgba(245, 245, 247, 0.4);
+  --nav-bg-scrolled: rgba(245, 245, 247, 0.85);
 }
 
 /* Base Reset & Lenis Setup */
@@ -97,6 +99,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); text-transform: uppercase; fo
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
   transition: background 0.3s, height 0.3s;
+}
+.navbar.scrolled {
+  height: 80px;
+  background: var(--nav-bg-scrolled);
 }
 .brand-group { display: flex; align-items: center; gap: 1rem; }
 .nav-logo { height: 50px; object-fit: contain; transition: height 0.3s; }
@@ -178,7 +184,8 @@ body.light-theme .theme-toggle-btn:hover {
 
 /* Light Theme Overrides */
 body.light-theme .brand-name { color: #1D1D1F; }
-body.light-theme .display-huge { color: #1D1D1F; mix-blend-mode: normal; }
+body.light-theme .display-huge { color: #FFFFFF; mix-blend-mode: difference; }
+body.light-theme #webgl-canvas { mix-blend-mode: normal; opacity: 0.6; }
 body.light-theme .glass-panel { background: rgba(255, 255, 255, 0.55); border-color: rgba(0,0,0,0.06); }
 body.light-theme .preloader { background: #F5F5F7; }
 body.light-theme .preloader-text { color: var(--accent-purple); }

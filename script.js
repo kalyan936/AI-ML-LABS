@@ -226,11 +226,9 @@ function initThreeJS() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
       if (window.scrollY > 50) {
-        navbar.style.height = '80px';
-        navbar.style.background = 'rgba(5, 5, 5, 0.85)';
+        navbar.classList.add('scrolled');
       } else {
-        navbar.style.height = '100px';
-        navbar.style.background = 'rgba(5, 5, 5, 0.4)';
+        navbar.classList.remove('scrolled');
       }
     }
   });
@@ -279,8 +277,11 @@ function updateThreeTheme() {
   const material = window.threePointsMaterial;
   if (!material) return;
   if (document.body.classList.contains('light-theme')) {
-    material.opacity = 0.35;
+    material.opacity = 0.6;
+    material.blending = THREE.NormalBlending;
   } else {
     material.opacity = 0.70;
+    material.blending = THREE.AdditiveBlending;
   }
+  material.needsUpdate = true;
 }
