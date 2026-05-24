@@ -20,6 +20,7 @@
   <div class="preloader"><div class="preloader-text">INITIALIZING AIML</div></div>
   <canvas id="webgl-canvas"></canvas>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html" class="brand-group">
       <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
@@ -34,39 +35,98 @@
     </div>
   </nav>
 
+  <!-- Header -->
   <section class="section container" style="padding-top: 25vh;">
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">SYSTEM</span></div></h1>
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">CAPABILITIES</div></h1>
   </section>
 
-  <section class="section container">
-    <div style="display: flex; flex-direction: column; gap: 10vh;">
-      <div class="glass-panel" style="display:flex; justify-content:space-between; align-items:flex-start;">
-        <div style="max-width: 60vw;">
-          <h2 class="display-large" style="color: var(--accent-cyan);">ML</h2>
-          <h3 class="display-med" style="margin-bottom: 2vh;">Predictive Modelling</h3>
-          <p class="text-body">Statistical inference engines processing high-velocity data streams for anomaly detection and forecasting.</p>
+  <!-- Service Details -->
+  <section class="section container" style="margin-bottom: 10vh;">
+    <div style="display: flex; flex-direction: column; gap: 8vh;">
+      
+      <!-- Service 1 -->
+      <div class="glass-panel" style="border-left: 4px solid var(--accent-cyan); display: flex; flex-direction: column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">[ CAPABILITY_01 ]</span>
+          <h2 class="display-large" style="color: var(--accent-cyan); margin-top: 1vh;">MACHINE LEARNING</h2>
+          <h3 class="display-med" style="margin-top: 1vh; color: white;">High-Velocity Predictive Topology</h3>
+        </div>
+        <p class="text-body" style="font-size: 1.1rem; color: #eee;">
+          We build customized deep neural networks that ingest, process, and analyze petabytes of multi-modal, unstructured data in real-time, executing deterministic risk-matrix evaluations.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Predictive Modelling</h4>
+            <p class="text-body" style="font-size: 0.9rem;">High-dimensional regression and clustering algorithms mapping future operational trends.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Neural Anomaly Signals</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Ultra-fast signal checking returning instantaneous defect and fraud alert alerts.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Dynamic Risk Scoring</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Dynamic assessment pipelines optimizing liquidity and credit metrics.</p>
+          </div>
         </div>
       </div>
 
-      <div class="glass-panel" style="display:flex; justify-content:space-between; align-items:flex-start;">
-        <div style="max-width: 60vw;">
-          <h2 class="display-large" style="color: var(--accent-purple);">GEN</h2>
-          <h3 class="display-med" style="margin-bottom: 2vh;">Generative Synthesis</h3>
-          <p class="text-body">Fine-tuned foundational models implementing advanced RAG architectures across secure enterprise domains.</p>
+      <!-- Service 2 -->
+      <div class="glass-panel" style="border-left: 4px solid var(--accent-purple); display: flex; flex-direction: column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); font-weight: 700;">[ CAPABILITY_02 ]</span>
+          <h2 class="display-large" style="color: var(--accent-purple); margin-top: 1vh;">GENERATIVE AI</h2>
+          <h3 class="display-med" style="margin-top: 1vh; color: white;">Domain-Grounded Language Synthesis</h3>
+        </div>
+        <p class="text-body" style="font-size: 1.1rem; color: #eee;">
+          Our lab constructs fine-tuned, secure foundational models anchored strictly in your operational data using advanced retrieval-augmented generation architectures.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Multi-Vector RAG</h4>
+            <p class="text-body" style="font-size: 0.9rem;">State-of-the-art vector embedding storage returning context-perfect facts without hallucinations.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Secure Fine-Tuning</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Adapting pre-trained weights to secure infrastructure without exposing proprietary data weights.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Prompt-Shield Logic</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Active input-output validation layers neutralizing prompt injection and extraction vectors.</p>
+          </div>
         </div>
       </div>
 
-      <div class="glass-panel" style="display:flex; justify-content:space-between; align-items:flex-start;">
-        <div style="max-width: 60vw;">
-          <h2 class="display-large" style="color: var(--accent-orange);">AGT</h2>
-          <h3 class="display-med" style="margin-bottom: 2vh;">Autonomous Logic</h3>
-          <p class="text-body">Self-prompting, multi-agent networks that reason, execute tools, and self-correct without human latency.</p>
+      <!-- Service 3 -->
+      <div class="glass-panel" style="border-left: 4px solid var(--accent-orange); display: flex; flex-direction: column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); font-weight: 700;">[ CAPABILITY_03 ]</span>
+          <h2 class="display-large" style="color: var(--accent-orange); margin-top: 1vh;">AUTONOMOUS AGENTS</h2>
+          <h3 class="display-med" style="margin-top: 1vh; color: white;">Multi-Agent Task Orchestration</h3>
+        </div>
+        <p class="text-body" style="font-size: 1.1rem; color: #eee;">
+          We build agent networks that reason, orchestrate actions, execute custom APIs, and securely self-correct in complex workflow loops.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Self-Refining Loops</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Agents test their output, analyze execution logs, and iterate until the mathematical objective is satisfied.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Graph Consensus Protocol</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Coordinating multi-agent networks to agree on execution outcomes before writing changes.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Tool Binding Systems</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Safely binding database, shell, and web API hooks directly into dynamic reasoning engines.</p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <h2 class="footer-large-text">AIML LABS</h2>

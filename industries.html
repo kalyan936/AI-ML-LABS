@@ -20,6 +20,7 @@
   <div class="preloader"><div class="preloader-text">INITIALIZING AIML</div></div>
   <canvas id="webgl-canvas"></canvas>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html" class="brand-group">
       <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
@@ -34,32 +35,100 @@
     </div>
   </nav>
 
+  <!-- Header -->
   <section class="section container" style="padding-top: 25vh;">
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">SECTOR</span></div></h1>
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">DEGREES</div></h1>
   </section>
 
-  <section class="section container">
-    <div class="grid-2">
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-purple); margin-bottom: 2vh;">FINANCE</h3>
-        <p class="text-body">Algorithmic execution logic and topological anomaly detection for secure, high-frequency ledgers.</p>
+  <!-- Industries Grid -->
+  <section class="section container" style="margin-bottom: 10vh;">
+    <div class="grid-2" style="gap: 6vh;">
+      
+      <!-- Finance -->
+      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); font-weight: 700;">[ DEPLOYMENT_SEC_01 ]</span>
+          <h2 class="display-med" style="color: var(--accent-purple); margin-top: 1vh;">FINANCE</h2>
+          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-cyan); margin-top: 0.5vh;">SYS_STATUS: ACTIVE // ERR_RATE: 0.0001%</p>
+        </div>
+        <p class="text-body" style="color: #eee;">
+          We engineer algorithmic credit assessment, neural ledger verification, and deterministic anti-fraud scoring. Our pipelines process massive financial feeds in high-frequency trading contexts.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
+          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
+            <li>• Multi-Factor Risk Assessment Engines</li>
+            <li>• Real-Time Ledger Arbitrage Auditing</li>
+            <li>• Predictive Liquidity Stress Models</li>
+          </ul>
+        </div>
       </div>
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-cyan); margin-bottom: 2vh;">HEALTH</h3>
-        <p class="text-body">Deep convolutional diagnostics processing complex tensor structures for immediate clinical signaling.</p>
+
+      <!-- Health -->
+      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">[ DEPLOYMENT_SEC_02 ]</span>
+          <h2 class="display-med" style="color: var(--accent-cyan); margin-top: 1vh;">HEALTHCARE</h2>
+          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-purple); margin-top: 0.5vh;">SYS_STATUS: ONLINE // PRECSN: 99.82%</p>
+        </div>
+        <p class="text-body" style="color: #eee;">
+          Deploying deep convolutional image segmentation, automated clinical symptom alert loops, and cellular-level anomalies detection systems operating directly at extreme edges.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
+          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
+            <li>• Spatial Cellular Scan Analysis</li>
+            <li>• Real-Time Patient Diagnostic Scoring</li>
+            <li>• High-Throughput Bioinformatic Clusters</li>
+          </ul>
+        </div>
       </div>
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-orange); margin-bottom: 2vh;">COMMERCE</h3>
-        <p class="text-body">Stochastic optimization matrices driving dynamic pricing and deterministic supply logistics.</p>
+
+      <!-- Commerce -->
+      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); font-weight: 700;">[ DEPLOYMENT_SEC_03 ]</span>
+          <h2 class="display-med" style="color: var(--accent-orange); margin-top: 1vh;">COMMERCE</h2>
+          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-orange); margin-top: 0.5vh;">SYS_STATUS: BALANCED // EFFCY: +14.2X</p>
+        </div>
+        <p class="text-body" style="color: #eee;">
+          Stochastic logistical route optimizations and automated multi-agent demand matching. We run pricing algorithms that dynamically calculate and recalibrate relative margins instantly.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
+          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
+            <li>• Multi-Node Supply Distribution Graphs</li>
+            <li>• Real-Time Elastic Pricing Networks</li>
+            <li>• Automated Warehouse Agent Coordination</li>
+          </ul>
+        </div>
       </div>
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--text); margin-bottom: 2vh;">DEFENSE</h3>
-        <p class="text-body">Zero-trust autonomous agents neutralizing spectral cyber-incursions in strictly regulated domains.</p>
+
+      <!-- Defense -->
+      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
+        <div>
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--text); font-weight: 700;">[ DEPLOYMENT_SEC_04 ]</span>
+          <h2 class="display-med" style="color: var(--text); margin-top: 1vh;">DEFENSE</h2>
+          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--text-muted); margin-top: 0.5vh;">SYS_STATUS: GUARDED // LATENCY: &lt;1.2MS</p>
+        </div>
+        <p class="text-body" style="color: #eee;">
+          Zero-trust multi-agent network boundaries actively neutralizing spectral and structural cyber threats across strictly isolated and air-gapped secure tactical infrastructure.
+        </p>
+        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
+          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
+            <li>• High-Velocity Threat Detection Arrays</li>
+            <li>• Air-Gapped Local Model Architectures</li>
+            <li>• Spectral Defense Network Topologies</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <h2 class="footer-large-text">AIML LABS</h2>
