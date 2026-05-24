@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="AIML Labs Pvt Ltd — Pioneering Machine Learning, Artificial Intelligence, Generative AI & Agentic AI solutions for Banking, Finance, Healthcare and E-Commerce."/>
-  <title>AIML Labs Pvt Ltd | AI & Machine Learning Solutions</title>
+  <title>AIML Labs Pvt Ltd | AI Solutions</title>
   <link rel="stylesheet" href="assets/styles.css"/>
   <link rel="icon" type="image/png" href="assets/logo.png"/>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     NAVIGATION
-═══════════════════════════════════════ -->
+<!-- NAV -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
@@ -24,443 +21,230 @@
       <a href="industries.html">Industries</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta">Get In Touch</a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get In Touch</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-toggle" id="navToggle">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" class="active">Home</a>
   <a href="services.html">Services</a>
   <a href="industries.html">Industries</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="nav-cta" style="text-align:center;border-radius:50px;background:linear-gradient(135deg,#6B21E8,#00B4D8);color:white!important;padding:.75rem;border-bottom:none;">Get In Touch</a>
 </div>
 
-<!-- ═══════════════════════════════════════
-     SECTION 1 — HERO
-═══════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
+  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80" alt="Modern Tech Office" class="hero-img-bg reveal-right"/>
   <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-dot"></span>
-        Next-Generation AI Solutions
-      </div>
-      <h1 class="hero-h1">
-        Transforming Business<br/>
-        with <span class="gradient-text">AI &amp; Machine</span><br/>
-        <span class="orange-text">Learning</span>
-      </h1>
-      <p class="hero-sub">
-        AIML Labs Pvt Ltd delivers enterprise-grade ML, AI, Generative AI &amp; Agentic AI solutions that revolutionize how Banking, Finance, Healthcare and E-Commerce industries operate.
-      </p>
+    <div class="hero-content reveal-left">
+      <div class="eyebrow">Next-Generation AI</div>
+      <h1 class="hero-h1">Transforming<br/>Business with<br/><span class="gradient-text">Machine Learning</span></h1>
+      <p class="hero-sub">AIML Labs Pvt Ltd delivers enterprise-grade AI solutions that revolutionize how industries operate. Clean code, autonomous agents, and measurable ROI.</p>
       <div class="hero-ctas">
-        <a href="services.html" class="btn btn-primary">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-          Explore Services
-        </a>
+        <a href="services.html" class="btn btn-primary">Explore Services</a>
         <a href="contact.html" class="btn btn-ghost">Schedule a Demo</a>
       </div>
-      <div class="hero-tags">
-        <span class="badge badge-purple">🤖 Machine Learning</span>
-        <span class="badge badge-cyan">🧠 Artificial Intelligence</span>
-        <span class="badge badge-orange">✨ Generative AI</span>
-        <span class="badge badge-gold">⚡ Agentic AI</span>
-      </div>
     </div>
-
-    <div class="hero-visual">
-      <div class="hero-card-stack">
-        <!-- Floating stat cards -->
-        <div class="hcard hcard-stat hcard-stat-1">
-          <div class="hcard-stat-num gradient-text">150+</div>
-          <div class="hcard-stat-lbl">AI Projects</div>
-        </div>
-        <!-- Central card -->
-        <div class="hcard hcard-main">
-          <div class="hcard-logo"><img src="assets/logo.png" alt="AIML Labs"/></div>
-          <div class="hcard-title">AIML Labs Pvt Ltd</div>
-          <div class="hcard-sub">Intelligence. Innovation. Impact.</div>
-          <div style="margin-top:1.25rem; display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap;">
-            <span class="badge badge-purple" style="font-size:.7rem;">ML</span>
-            <span class="badge badge-cyan"   style="font-size:.7rem;">AI</span>
-            <span class="badge badge-orange" style="font-size:.7rem;">Gen AI</span>
-            <span class="badge badge-gold"   style="font-size:.7rem;">Agentic AI</span>
-          </div>
-        </div>
-        <div class="hcard hcard-stat hcard-stat-2">
-          <div class="hcard-stat-num orange-text">98%</div>
-          <div class="hcard-stat-lbl">Client Satisfaction</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--text-muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;">
-    <span>Scroll</span>
-    <div style="width:1px;height:40px;background:linear-gradient(180deg,var(--purple),transparent);"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 2 — TICKER / MARQUEE
-═══════════════════════════════════════ -->
-<div class="ticker-section">
-  <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-dot"></span>Machine Learning</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Artificial Intelligence</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Generative AI</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Agentic AI</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Deep Learning</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>NLP &amp; LLMs</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Computer Vision</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Predictive Analytics</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Banking AI</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>FinTech Solutions</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>Healthcare AI</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>E-Commerce Intelligence</span>
+<!-- TICKER -->
+<div style="padding: 2rem 0; border-bottom: 1px solid var(--border); overflow: hidden; background: white;">
+  <div style="display:flex; gap: 4rem; animation: ticker 25s linear infinite; white-space: nowrap; font-family:'Outfit',sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+    <span>Machine Learning</span> • <span>Generative AI</span> • <span>Agentic Systems</span> • <span>Computer Vision</span> • <span>Predictive Analytics</span> • <span>NLP</span> • 
+    <span>Machine Learning</span> • <span>Generative AI</span> • <span>Agentic Systems</span> • <span>Computer Vision</span> • <span>Predictive Analytics</span> • <span>NLP</span>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     SECTION 3 — STATS / NUMBERS
-═══════════════════════════════════════ -->
-<section class="section" style="background:var(--bg-secondary);">
+<!-- STATS -->
+<section class="section" style="padding-top: 4rem; padding-bottom: 4rem;">
   <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">Our Impact</p>
-      <h2 class="section-title">Numbers That Define Us</h2>
-      <p class="section-sub">Real results delivered to enterprises across industries through cutting-edge AI &amp; ML solutions.</p>
-    </div>
     <div class="stats-grid">
       <div class="stat-card reveal d-1">
-        <div class="stat-icon">🚀</div>
-        <div class="stat-num" data-target="150" data-suffix="+">0+</div>
+        <div class="stat-num" data-target="150" data-suffix="+">150+</div>
         <div class="stat-label">AI Projects Delivered</div>
       </div>
       <div class="stat-card reveal d-2">
-        <div class="stat-icon">🏢</div>
-        <div class="stat-num" data-target="80" data-suffix="+">0+</div>
+        <div class="stat-num" data-target="80" data-suffix="+">80+</div>
         <div class="stat-label">Enterprise Clients</div>
       </div>
       <div class="stat-card reveal d-3">
-        <div class="stat-icon">📅</div>
-        <div class="stat-num" data-target="5" data-suffix="+">0+</div>
-        <div class="stat-label">Years of Excellence</div>
+        <div class="stat-num" data-target="98" data-suffix="%">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
       </div>
       <div class="stat-card reveal d-4">
-        <div class="stat-icon">🎯</div>
-        <div class="stat-num" data-target="98" data-suffix="%">0%</div>
-        <div class="stat-label">Client Satisfaction Rate</div>
+        <div class="stat-num" data-target="5" data-suffix="+">5+</div>
+        <div class="stat-label">Years of Excellence</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 4 — SERVICES
-═══════════════════════════════════════ -->
-<section class="section" id="services">
+<!-- SERVICES -->
+<section class="section" style="background: var(--bg-secondary);">
   <div class="container">
     <div class="section-header reveal">
-      <p class="eyebrow">What We Do</p>
-      <h2 class="section-title">Our Core AI Services</h2>
-      <p class="section-sub">From foundational Machine Learning to autonomous Agentic AI — we build intelligent systems that learn, reason and act.</p>
+      <div class="eyebrow">Core Expertise</div>
+      <h2 class="section-title">Our AI Services</h2>
+      <p class="section-sub">From foundational machine learning models to autonomous multi-agent systems.</p>
     </div>
+    
     <div class="services-grid">
-
       <div class="service-card reveal d-1">
-        <span class="service-num">01</span>
-        <div class="icon-box ib-purple" style="margin-bottom:1.5rem;">🧮</div>
-        <h3><span class="gradient-text">Machine Learning</span></h3>
+        <div class="icon-box">🧮</div>
+        <h3>Machine Learning</h3>
         <p>Custom ML models that extract patterns from your data to drive accurate predictions, automation, and smarter business decisions at scale.</p>
-        <div class="service-tags">
-          <span class="badge badge-purple">Supervised Learning</span>
-          <span class="badge badge-purple">Unsupervised Learning</span>
-          <span class="badge badge-purple">Reinforcement Learning</span>
-        </div>
-        <a href="services.html#ml" class="service-link">Learn more →</a>
+        <a href="services.html#ml" style="font-weight:600; color:var(--purple);">Learn more &rarr;</a>
       </div>
-
+      
       <div class="service-card reveal d-2">
-        <span class="service-num">02</span>
-        <div class="icon-box ib-cyan" style="margin-bottom:1.5rem;">🧠</div>
-        <h3><span style="background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Artificial Intelligence</span></h3>
+        <div class="icon-box">🧠</div>
+        <h3>Artificial Intelligence</h3>
         <p>End-to-end AI systems — from computer vision and NLP to intelligent automation — tailored to solve your toughest enterprise challenges.</p>
-        <div class="service-tags">
-          <span class="badge badge-cyan">Computer Vision</span>
-          <span class="badge badge-cyan">NLP</span>
-          <span class="badge badge-cyan">AI Automation</span>
-        </div>
-        <a href="services.html#ai" class="service-link">Learn more →</a>
+        <a href="services.html#ai" style="font-weight:600; color:var(--purple);">Learn more &rarr;</a>
       </div>
 
       <div class="service-card reveal d-3">
-        <span class="service-num">03</span>
-        <div class="icon-box ib-orange" style="margin-bottom:1.5rem;">✨</div>
-        <h3><span class="orange-text">Generative AI</span></h3>
-        <p>Harness the power of Large Language Models and diffusion models to generate content, code, reports, and creative assets at enterprise scale.</p>
-        <div class="service-tags">
-          <span class="badge badge-orange">LLMs</span>
-          <span class="badge badge-orange">RAG Systems</span>
-          <span class="badge badge-orange">AI Copilots</span>
-        </div>
-        <a href="services.html#genai" class="service-link">Learn more →</a>
+        <div class="icon-box">✨</div>
+        <h3>Generative AI</h3>
+        <p>Harness the power of Large Language Models (LLMs) and RAG to generate content, code, reports, and internal knowledge assistants.</p>
+        <a href="services.html#genai" style="font-weight:600; color:var(--purple);">Learn more &rarr;</a>
       </div>
 
       <div class="service-card reveal d-4">
-        <span class="service-num">04</span>
-        <div class="icon-box ib-gold" style="margin-bottom:1.5rem;">⚡</div>
-        <h3><span class="orange-text">Agentic AI</span></h3>
-        <p>Deploy autonomous AI agents that plan, reason, use tools, and execute complex multi-step workflows — transforming operations without human intervention.</p>
-        <div class="service-tags">
-          <span class="badge badge-gold">AI Agents</span>
-          <span class="badge badge-gold">Multi-Agent Systems</span>
-          <span class="badge badge-gold">Workflow Automation</span>
-        </div>
-        <a href="services.html#agentic" class="service-link">Learn more →</a>
+        <div class="icon-box">⚡</div>
+        <h3>Agentic AI</h3>
+        <p>Deploy autonomous AI agents that plan, reason, use tools, and execute complex multi-step workflows without human intervention.</p>
+        <a href="services.html#agentic" style="font-weight:600; color:var(--purple);">Learn more &rarr;</a>
       </div>
-
-    </div>
-    <div style="text-align:center;margin-top:3rem;" class="reveal">
-      <a href="services.html" class="btn btn-primary">View All Services</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 5 — INDUSTRIES
-═══════════════════════════════════════ -->
-<section class="section" style="background:var(--bg-secondary);" id="industries">
+<!-- IMAGE BREAK -->
+<section style="padding: 0; margin: 0;">
+  <div class="img-wrapper" style="border-radius: 0; height: 50vh;">
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80" alt="Cyber Security Tech"/>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="reveal-left">
+        <div class="eyebrow">Industries</div>
+        <h2 class="section-title">Serving Critical Sectors</h2>
+        <p class="section-sub" style="margin-bottom: 2rem;">Our AI solutions are purpose-built for the unique challenges and strict compliance requirements of high-stakes industries.</p>
+        
+        <ul style="list-style: none; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+          <li style="display:flex; align-items:center; gap: 1rem; font-weight: 600; font-size: 1.1rem;">
+            <div style="width:32px;height:32px;background:var(--bg-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--purple);">🏦</div> Banking & Finance
+          </li>
+          <li style="display:flex; align-items:center; gap: 1rem; font-weight: 600; font-size: 1.1rem;">
+            <div style="width:32px;height:32px;background:var(--bg-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--purple);">🏥</div> Health Care
+          </li>
+          <li style="display:flex; align-items:center; gap: 1rem; font-weight: 600; font-size: 1.1rem;">
+            <div style="width:32px;height:32px;background:var(--bg-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--purple);">🛒</div> E-Commerce
+          </li>
+        </ul>
+        <a href="industries.html" class="btn btn-ghost">View All Industries</a>
+      </div>
+      <div class="reveal-right">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=1000&q=80" alt="Finance Meeting"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="section" style="background: var(--bg-secondary);">
   <div class="container">
     <div class="section-header centered reveal">
-      <p class="eyebrow">Industries We Transform</p>
-      <h2 class="section-title">Serving the World's Most Critical Sectors</h2>
-      <p class="section-sub">Our AI solutions are purpose-built for the unique challenges and compliance requirements of each industry.</p>
+      <div class="eyebrow">Methodology</div>
+      <h2 class="section-title">How We Build AI</h2>
     </div>
-    <div class="industries-grid">
-
-      <div class="industry-card reveal d-1">
-        <div class="industry-icon ib-purple">🏦</div>
-        <div>
-          <h3>Banking</h3>
-          <p>AI-powered fraud detection, credit risk scoring, AML compliance automation, and intelligent customer service chatbots that reduce costs and elevate customer experience.</p>
-          <a href="industries.html#banking" class="service-link" style="margin-top:1rem;">Explore →</a>
-        </div>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+      <div class="reveal d-1" style="text-align:center; padding: 2rem;">
+        <div style="font-family:'Outfit',sans-serif; font-size: 4rem; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 1rem;">01</div>
+        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Discover & Define</h4>
+        <p style="color:var(--text-secondary);">We immerse in your business context and define clear success metrics.</p>
       </div>
-
-      <div class="industry-card reveal d-2">
-        <div class="industry-icon ib-cyan">📈</div>
-        <div>
-          <h3>Finance</h3>
-          <p>Algorithmic trading, portfolio optimization, market sentiment analysis and real-time risk management powered by advanced ML models and predictive analytics.</p>
-          <a href="industries.html#finance" class="service-link" style="margin-top:1rem;">Explore →</a>
-        </div>
+      <div class="reveal d-2" style="text-align:center; padding: 2rem;">
+        <div style="font-family:'Outfit',sans-serif; font-size: 4rem; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 1rem;">02</div>
+        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Design & Develop</h4>
+        <p style="color:var(--text-secondary);">Our data scientists build and train custom models using your exact data.</p>
       </div>
-
-      <div class="industry-card reveal d-3">
-        <div class="industry-icon ib-orange">🏥</div>
-        <div>
-          <h3>Health Care</h3>
-          <p>Medical imaging AI, clinical decision support, patient outcome prediction, drug discovery acceleration and HIPAA-compliant intelligent health data pipelines.</p>
-          <a href="industries.html#healthcare" class="service-link" style="margin-top:1rem;">Explore →</a>
-        </div>
-      </div>
-
-      <div class="industry-card reveal d-4">
-        <div class="industry-icon ib-gold">🛒</div>
-        <div>
-          <h3>E-Commerce</h3>
-          <p>Personalisation engines, dynamic pricing, demand forecasting, visual search, customer churn prediction and AI-driven supply chain optimisation for online retailers.</p>
-          <a href="industries.html#ecommerce" class="service-link" style="margin-top:1rem;">Explore →</a>
-        </div>
-      </div>
-
-    </div>
-    <div style="text-align:center;margin-top:3rem;" class="reveal">
-      <a href="industries.html" class="btn btn-ghost">See All Industries</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 6 — HOW WE WORK
-═══════════════════════════════════════ -->
-<section class="section" id="process">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">Our Process</p>
-      <h2 class="section-title">How We Build AI Solutions</h2>
-      <p class="section-sub">A proven, structured methodology that takes your idea from discovery to deployment — fast, reliably, and at scale.</p>
-    </div>
-    <div class="process-wrap">
-      <div class="process-line"></div>
-      <div class="process-grid">
-        <div class="process-step reveal d-1">
-          <div class="step-circle">01</div>
-          <h3>Discover &amp; Define</h3>
-          <p>We immerse in your business context, audit your data landscape, identify AI opportunities and define clear success metrics aligned to your goals.</p>
-        </div>
-        <div class="process-step reveal d-2">
-          <div class="step-circle">02</div>
-          <h3>Design &amp; Develop</h3>
-          <p>Our data scientists and ML engineers design, train, validate and iterate on custom models using your data — with full transparency and explainability.</p>
-        </div>
-        <div class="process-step reveal d-3">
-          <div class="step-circle">03</div>
-          <h3>Deploy &amp; Scale</h3>
-          <p>We deploy production-ready AI systems with robust MLOps pipelines, continuous monitoring and ongoing optimisation as your business evolves.</p>
-        </div>
+      <div class="reveal d-3" style="text-align:center; padding: 2rem;">
+        <div style="font-family:'Outfit',sans-serif; font-size: 4rem; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 1rem;">03</div>
+        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Deploy & Scale</h4>
+        <p style="color:var(--text-secondary);">We deploy robust MLOps pipelines with continuous monitoring.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 7 — WHY AIML LABS
-═══════════════════════════════════════ -->
-<section class="section" style="background:var(--bg-secondary);" id="why-us">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">Why Choose Us</p>
-      <h2 class="section-title">The AIML Labs Advantage</h2>
-      <p class="section-sub">We combine deep technical expertise with industry knowledge to deliver AI that actually works in the real world.</p>
-    </div>
-    <div class="features-grid">
-
-      <div class="feature-card reveal d-1">
-        <div class="feature-icon">🔬</div>
-        <h4>Research-Driven Innovation</h4>
-        <p>Our team stays at the forefront of AI research, applying the latest breakthroughs from academia directly to enterprise solutions.</p>
-      </div>
-      <div class="feature-card reveal d-2">
-        <div class="feature-icon">🏗️</div>
-        <h4>Enterprise-Grade Architecture</h4>
-        <p>Scalable, cloud-native AI infrastructure built to handle millions of inferences daily with 99.9% uptime SLAs.</p>
-      </div>
-      <div class="feature-card reveal d-3">
-        <div class="feature-icon">🔒</div>
-        <h4>Security &amp; Compliance First</h4>
-        <p>End-to-end data security, regulatory compliance (GDPR, HIPAA, PCI-DSS) and responsible AI principles baked into every solution.</p>
-      </div>
-      <div class="feature-card reveal d-4">
-        <div class="feature-icon">⚙️</div>
-        <h4>Full MLOps &amp; Monitoring</h4>
-        <p>Automated ML pipelines, model drift detection, A/B testing and continuous retraining — keeping your AI sharp and accurate over time.</p>
-      </div>
-      <div class="feature-card reveal d-5">
-        <div class="feature-icon">🤝</div>
-        <h4>Dedicated AI Partnership</h4>
-        <p>A dedicated team of AI engineers and consultants who function as an extension of your team — not just a vendor.</p>
-      </div>
-      <div class="feature-card reveal d-6">
-        <div class="feature-icon">📊</div>
-        <h4>Measurable ROI</h4>
-        <p>Every engagement is tied to clear KPIs. We measure and report the business impact of AI with full transparency.</p>
-      </div>
-
-    </div>
+<!-- CTA -->
+<section class="section" style="text-align: center;">
+  <div class="container reveal">
+    <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">Ready to start your<br/><span class="gradient-text">AI Journey?</span></h2>
+    <p class="section-sub" style="margin: 1.5rem auto 3rem;">Let's discuss how AIML Labs can unlock the potential of your data.</p>
+    <a href="contact.html" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Book a Consultation</a>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 8 — FINAL CTA
-═══════════════════════════════════════ -->
-<section class="cta-section" id="cta">
-  <div class="orb orb-1" style="opacity:.4;"></div>
-  <div class="orb orb-2" style="opacity:.3;"></div>
+<!-- FOOTER -->
+<footer style="background: var(--bg-secondary); padding: 5rem 0 2rem; border-top: 1px solid var(--border);">
   <div class="container">
-    <div class="cta-inner reveal">
-      <p class="eyebrow" style="justify-content:center;">Ready to Transform?</p>
-      <h2>Start Your <span class="gradient-text">AI Journey</span> Today</h2>
-      <p>Let's discuss how AIML Labs can help your business unlock the full potential of artificial intelligence and machine learning.</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-primary">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-          Book a Free Consultation
-        </a>
-        <a href="services.html" class="btn btn-ghost">Explore Our Services</a>
-      </div>
-
-      <!-- Tech stack badges -->
-      <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:2.5rem;">
-        <span style="color:var(--text-muted);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;align-self:center;">Technologies:</span>
-        <span class="badge badge-purple">Python</span>
-        <span class="badge badge-cyan">TensorFlow</span>
-        <span class="badge badge-orange">PyTorch</span>
-        <span class="badge badge-gold">LangChain</span>
-        <span class="badge badge-purple">OpenAI</span>
-        <span class="badge badge-cyan">AWS / Azure / GCP</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></div>
-        <p>AIML Labs Pvt Ltd is a next-generation AI company delivering transformative Machine Learning, Generative AI, and Agentic AI solutions across Banking, Finance, Healthcare and E-Commerce.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-btn" aria-label="GitHub">⌥</a>
-          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
-        </div>
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+      <div>
+        <img src="assets/logo.png" alt="AIML Labs" style="height:48px; mix-blend-mode:multiply; margin-bottom: 1.5rem;"/>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem; max-width:300px;">Next-generation AI company delivering Machine Learning and Agentic AI.</p>
       </div>
       <div>
-        <p class="footer-col-title">Company</p>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact</a>
-          <a href="contact.html">Careers</a>
-        </div>
+        <h5 style="font-size:1.1rem; margin-bottom: 1.5rem;">Company</h5>
+        <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+          <li><a href="index.html" style="color:var(--text-secondary);">Home</a></li>
+          <li><a href="about.html" style="color:var(--text-secondary);">About Us</a></li>
+          <li><a href="contact.html" style="color:var(--text-secondary);">Contact</a></li>
+        </ul>
       </div>
       <div>
-        <p class="footer-col-title">Services</p>
-        <div class="footer-links">
-          <a href="services.html#ml">Machine Learning</a>
-          <a href="services.html#ai">Artificial Intelligence</a>
-          <a href="services.html#genai">Generative AI</a>
-          <a href="services.html#agentic">Agentic AI</a>
-        </div>
+        <h5 style="font-size:1.1rem; margin-bottom: 1.5rem;">Services</h5>
+        <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+          <li><a href="services.html#ml" style="color:var(--text-secondary);">Machine Learning</a></li>
+          <li><a href="services.html#genai" style="color:var(--text-secondary);">Generative AI</a></li>
+          <li><a href="services.html#agentic" style="color:var(--text-secondary);">Agentic AI</a></li>
+        </ul>
       </div>
       <div>
-        <p class="footer-col-title">Industries</p>
-        <div class="footer-links">
-          <a href="industries.html#banking">Banking</a>
-          <a href="industries.html#finance">Finance</a>
-          <a href="industries.html#healthcare">Health Care</a>
-          <a href="industries.html#ecommerce">E-Commerce</a>
-        </div>
+        <h5 style="font-size:1.1rem; margin-bottom: 1.5rem;">Industries</h5>
+        <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+          <li><a href="industries.html#banking" style="color:var(--text-secondary);">Banking</a></li>
+          <li><a href="industries.html#healthcare" style="color:var(--text-secondary);">Health Care</a></li>
+          <li><a href="industries.html#ecommerce" style="color:var(--text-secondary);">E-Commerce</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 AIML Labs Pvt Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+    <div style="border-top: 1px solid var(--border); padding-top: 2rem; display:flex; justify-content:space-between; color:var(--text-muted); font-size: 0.9rem;">
+      <p>&copy; 2025 AIML Labs Pvt Ltd. All rights reserved.</p>
+      <div style="display:flex; gap: 1.5rem;">
+        <a href="#">Privacy</a> <a href="#">Terms</a>
       </div>
     </div>
   </div>
 </footer>
 
+<style>
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+</style>
 <script src="assets/script.js"></script>
 </body>
 </html>
