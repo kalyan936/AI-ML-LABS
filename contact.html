@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact AIML Labs Pvt Ltd — Get in touch to discuss your AI and Machine Learning project needs."/>
+  <title>Contact Us | AIML Labs Pvt Ltd</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <style>
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--r-md); overflow: hidden; transition: var(--tr);
+    }
+    .faq-item:hover { border-color: rgba(107,33,232,0.4); }
+    .faq-question {
+      width: 100%; padding: 1.25rem 1.5rem; text-align: left; font-weight: 600;
+      font-size: 0.95rem; color: var(--text-primary); display: flex;
+      justify-content: space-between; align-items: center; cursor: pointer; background: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-arrow { color: var(--purple); font-size: 1.1rem; transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-item.open .faq-answer { max-height: 200px; padding: 0 1.5rem 1.25rem; }
+    .offices-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .office-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: 2rem; transition: var(--tr); text-align: center;
+    }
+    .office-card:hover { transform: translateY(-6px); border-color: rgba(107,33,232,0.4); box-shadow: var(--shadow-card); }
+    .office-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .office-city { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .office-addr { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; }
+    @media(max-width:768px) { .offices-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-cta">Get In Touch</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="industries.html">Industries</a><a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="eyebrow">Get In Touch</p>
+      <h1>Let's Build Something<br/><span class="gradient-text">Intelligent Together</span></h1>
+      <p>Have an AI challenge? Want to explore what ML can do for your business? Our team is ready to listen, advise, and deliver.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;">
+        <div style="display:flex;align-items:center;gap:.6rem;color:var(--text-secondary);font-size:.9rem;">
+          <span style="color:var(--cyan);">✓</span> Free Initial Consultation
+        </div>
+        <div style="display:flex;align-items:center;gap:.6rem;color:var(--text-secondary);font-size:.9rem;">
+          <span style="color:var(--cyan);">✓</span> Response within 24 hours
+        </div>
+        <div style="display:flex;align-items:center;gap:.6rem;color:var(--text-secondary);font-size:.9rem;">
+          <span style="color:var(--cyan);">✓</span> No commitment required
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="reveal-left">
+        <p class="eyebrow">Contact Details</p>
+        <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:2rem;">We'd Love to<br/><span class="gradient-text">Hear from You</span></h2>
+
+        <div class="contact-info-card">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <div class="contact-info-val">hello@aiml-labs.com</div>
+              <div class="contact-info-val" style="color:var(--text-secondary);font-size:.82rem;">enterprise@aiml-labs.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <div class="contact-info-label">Call Us</div>
+              <div class="contact-info-val">+91 98765 43210</div>
+              <div class="contact-info-val" style="color:var(--text-secondary);font-size:.82rem;">Mon–Fri, 9am–6pm IST</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Headquarters</div>
+              <div class="contact-info-val">Hyderabad, Telangana</div>
+              <div class="contact-info-val" style="color:var(--text-secondary);font-size:.82rem;">India — 500 032</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">⏱️</div>
+            <div>
+              <div class="contact-info-label">Response Time</div>
+              <div class="contact-info-val">Within 24 Hours</div>
+              <div class="contact-info-val" style="color:var(--text-secondary);font-size:.82rem;">Typically much faster</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div style="margin-top:2rem;">
+          <p style="font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1rem;">Follow Us</p>
+          <div style="display:flex;gap:.75rem;">
+            <a href="#" class="social-btn" style="width:46px;height:46px;font-size:.85rem;font-weight:700;">in</a>
+            <a href="#" class="social-btn" style="width:46px;height:46px;font-size:.85rem;">𝕏</a>
+            <a href="#" class="social-btn" style="width:46px;height:46px;font-size:1rem;">⌥</a>
+            <a href="#" class="social-btn" style="width:46px;height:46px;font-size:.85rem;">▶</a>
+          </div>
+        </div>
+
+        <!-- Services quick links -->
+        <div style="margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);">
+          <p style="font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:1rem;">Our Services</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+            <a href="services.html#ml"      class="badge badge-purple" style="cursor:pointer;">🧮 Machine Learning</a>
+            <a href="services.html#ai"      class="badge badge-cyan"   style="cursor:pointer;">🧠 Artificial Intelligence</a>
+            <a href="services.html#genai"   class="badge badge-orange" style="cursor:pointer;">✨ Generative AI</a>
+            <a href="services.html#agentic" class="badge badge-gold"   style="cursor:pointer;">⚡ Agentic AI</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal-right">
+        <div class="form-card">
+          <div style="margin-bottom:2rem;">
+            <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:.5rem;">Send Us a Message</h3>
+            <p style="color:var(--text-secondary);font-size:.9rem;">Fill in the details below and our AI consultants will get back to you within 24 hours.</p>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required/>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email *</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210"/>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Your Company Ltd"/>
+              </div>
+              <div class="form-group">
+                <label for="industry">Industry</label>
+                <select id="industry" name="industry">
+                  <option value="">Select your industry</option>
+                  <option value="banking">Banking</option>
+                  <option value="finance">Finance</option>
+                  <option value="healthcare">Health Care</option>
+                  <option value="ecommerce">E-Commerce</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="service">Service of Interest</label>
+                <select id="service" name="service">
+                  <option value="">Select a service</option>
+                  <option value="ml">Machine Learning</option>
+                  <option value="ai">Artificial Intelligence</option>
+                  <option value="genai">Generative AI</option>
+                  <option value="agentic">Agentic AI</option>
+                  <option value="multiple">Multiple Services</option>
+                  <option value="consultation">General Consultation</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Tell Us About Your Project *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Describe your AI challenge, goals and any specific requirements you have in mind..." required></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="budget">Estimated Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="">Preferred budget range</option>
+                  <option value="small">₹5L – ₹25L</option>
+                  <option value="medium">₹25L – ₹1Cr</option>
+                  <option value="large">₹1Cr – ₹5Cr</option>
+                  <option value="enterprise">₹5Cr+</option>
+                  <option value="discuss">Let's Discuss</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem;">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                Send Message to AIML Labs
+              </button>
+            </div>
+            <p style="text-align:center;color:var(--text-muted);font-size:.78rem;margin-top:1rem;">
+              🔒 Your information is secure and will never be shared with third parties.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OFFICES -->
+<section class="section" style="background:var(--bg-secondary);padding-top:0;padding-bottom:80px;">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <p class="eyebrow">Where We Are</p>
+      <h2 class="section-title">Our Offices</h2>
+    </div>
+    <div class="offices-grid">
+      <div class="office-card reveal d-1">
+        <div class="office-icon">🏙️</div>
+        <div class="office-city">Hyderabad <span class="badge badge-purple" style="font-size:.7rem;margin-left:.5rem;">HQ</span></div>
+        <div class="office-addr">HITEC City, Hyderabad<br/>Telangana – 500 032<br/>India</div>
+      </div>
+      <div class="office-card reveal d-2">
+        <div class="office-icon">🌆</div>
+        <div class="office-city">Bengaluru</div>
+        <div class="office-addr">Koramangala, Bengaluru<br/>Karnataka – 560 095<br/>India</div>
+      </div>
+      <div class="office-card reveal d-3">
+        <div class="office-icon">🌃</div>
+        <div class="office-city">Mumbai</div>
+        <div class="office-addr">Bandra Kurla Complex<br/>Mumbai – 400 051<br/>India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;">
+      <div class="reveal-left">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:2rem;">Have more questions? Reach out to us directly and we'll get back to you within 24 hours.</p>
+        <a href="mailto:hello@aiml-labs.com" class="btn btn-ghost btn-sm">📧 Email Us Directly</a>
+      </div>
+      <div class="faq-list reveal-right">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does a typical AI project take?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Project timelines vary based on scope and complexity. A focused ML model deployment can take 6–10 weeks. A full Gen AI platform with RAG and integrations typically runs 3–5 months. We'll give you a clear timeline estimate after understanding your requirements.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you work with companies that have limited AI maturity?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Absolutely. Many of our most successful engagements have been with organisations starting their AI journey. We provide full data strategy, infrastructure setup, and team upskilling alongside model development — meeting you exactly where you are.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do you handle data security and compliance?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Data security is fundamental to everything we build. We operate under strict NDAs, follow data minimisation principles, and ensure all solutions comply with relevant regulations — GDPR, HIPAA, RBI guidelines and PCI-DSS as applicable.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What industries do you specialise in?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Our four primary verticals are Banking, Finance, Health Care and E-Commerce. We have deep domain expertise and pre-built assets for each. We also take on select projects in other industries where our AI expertise is a strong fit.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you provide post-deployment support?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Yes — we offer comprehensive post-deployment support including 24/7 monitoring, model performance tracking, drift detection, retraining pipelines and dedicated AI operations support. We're a long-term partner, not a one-time vendor.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can you work with our existing technology stack?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">Yes. We build API-first, cloud-agnostic AI systems that integrate with your existing ERP, CRM, data warehouse and business applications. Whether you're on AWS, Azure, GCP or on-premise, we'll fit into your architecture.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="eyebrow" style="justify-content:center;">Your AI Journey Starts Here</p>
+      <h2>Ready to <span class="gradient-text">Get Started?</span></h2>
+      <p>Book a free 30-minute consultation with our AI experts. No commitment. Just great conversation about what AI can do for your business.</p>
+      <div class="cta-buttons">
+        <a href="mailto:hello@aiml-labs.com" class="btn btn-primary">📧 Email Us Now</a>
+        <a href="tel:+919876543210" class="btn btn-ghost">📞 Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></div>
+        <p>AIML Labs Pvt Ltd — Machine Learning, AI, Generative AI and Agentic AI for enterprises across Banking, Finance, Healthcare and E-Commerce.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">⌥</a><a href="#" class="social-btn">▶</a>
+        </div>
+      </div>
+      <div><p class="footer-col-title">Company</p><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div></div>
+      <div><p class="footer-col-title">Services</p><div class="footer-links"><a href="services.html#ml">Machine Learning</a><a href="services.html#ai">Artificial Intelligence</a><a href="services.html#genai">Generative AI</a><a href="services.html#agentic">Agentic AI</a></div></div>
+      <div><p class="footer-col-title">Industries</p><div class="footer-links"><a href="industries.html#banking">Banking</a><a href="industries.html#finance">Finance</a><a href="industries.html#healthcare">Health Care</a><a href="industries.html#ecommerce">E-Commerce</a></div></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AIML Labs Pvt Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>

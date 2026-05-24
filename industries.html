@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AIML Labs Pvt Ltd — AI solutions for Banking, Finance, Health Care and E-Commerce industries."/>
+  <title>Industries | AIML Labs Pvt Ltd</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <style>
+    .industry-section { padding: 90px 0; border-bottom: 1px solid var(--border); }
+    .industry-section:last-child { border-bottom: none; }
+    .ind-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .ind-grid.reverse { direction: rtl; }
+    .ind-grid.reverse > * { direction: ltr; }
+    .ind-content h2 { font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 800; margin-bottom: 1.25rem; }
+    .ind-content p  { color: var(--text-secondary); line-height: 1.85; font-size: 1rem; margin-bottom: 1.25rem; }
+    .ind-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 2.5rem; position: relative; overflow: hidden;
+    }
+    .ind-panel-header {
+      display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem;
+      padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .ind-panel-icon {
+      width: 72px; height: 72px; border-radius: var(--r-md); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 2rem;
+    }
+    .ind-panel-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .ind-panel-sub   { font-size: 0.85rem; color: var(--text-secondary); }
+    .solution-list   { display: flex; flex-direction: column; gap: 0.85rem; }
+    .solution-item {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      padding: 1rem 1.1rem; background: var(--bg-secondary);
+      border: 1px solid var(--border); border-radius: var(--r-md); transition: var(--tr);
+    }
+    .solution-item:hover { border-color: rgba(107,33,232,0.4); transform: translateX(5px); }
+    .sol-check { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .sol-text h5 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .sol-text p  { font-size: 0.8rem; color: var(--text-secondary); margin: 0; }
+    .outcome-strip {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.5rem;
+      padding: 1.25rem; background: var(--bg-secondary); border-radius: var(--r-md);
+      border: 1px solid var(--border);
+    }
+    .outcome-item { text-align: center; }
+    .outcome-num { font-family:'Space Grotesk',sans-serif; font-size: 1.5rem; font-weight: 800; }
+    .outcome-lbl { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.07em; }
+    @media (max-width: 1024px) {
+      .ind-grid { grid-template-columns: 1fr; }
+      .ind-grid.reverse { direction: ltr; }
+      .outcome-strip { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 480px) { .outcome-strip { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get In Touch</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="industries.html" class="active">Industries</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="eyebrow">Industries We Serve</p>
+      <h1>AI Solutions for the<br/><span class="gradient-text">World's Critical Sectors</span></h1>
+      <p>Purpose-built AI for regulated, high-stakes industries — combining domain expertise with state-of-the-art intelligence.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;">
+        <a href="#banking"    class="badge badge-purple" style="cursor:pointer;">🏦 Banking</a>
+        <a href="#finance"    class="badge badge-cyan"   style="cursor:pointer;">📈 Finance</a>
+        <a href="#healthcare" class="badge badge-orange" style="cursor:pointer;">🏥 Health Care</a>
+        <a href="#ecommerce"  class="badge badge-gold"   style="cursor:pointer;">🛒 E-Commerce</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BANKING ═══ -->
+<section class="industry-section" id="banking">
+  <div class="container">
+    <div class="ind-grid">
+      <div class="ind-content reveal-left">
+        <p class="eyebrow">Industry 01</p>
+        <h2>🏦 <span class="gradient-text">Banking</span></h2>
+        <p>Banks face mounting pressure to detect fraud in milliseconds, comply with evolving AML regulations and deliver hyper-personalised customer experiences — all simultaneously. AIML Labs builds the intelligent infrastructure to meet these demands.</p>
+        <p>Our banking AI solutions are built to regulatory standards (RBI, Basel III, GDPR) and deploy seamlessly within core banking architectures — on-premise, cloud or hybrid.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;">
+          <span class="badge badge-purple">Fraud Detection</span>
+          <span class="badge badge-purple">AML Compliance</span>
+          <span class="badge badge-purple">Credit Risk</span>
+          <span class="badge badge-purple">KYC Automation</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Talk to a Banking AI Expert</a>
+      </div>
+      <div class="reveal-right">
+        <div class="ind-panel">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-primary);"></div>
+          <div class="ind-panel-header">
+            <div class="ind-panel-icon ib-purple">🏦</div>
+            <div>
+              <div class="ind-panel-title">Banking AI Suite</div>
+              <div class="ind-panel-sub">Enterprise-grade solutions for modern banks</div>
+            </div>
+          </div>
+          <div class="solution-list">
+            <div class="solution-item">
+              <span class="sol-check">🔍</span>
+              <div class="sol-text"><h5>Real-Time Fraud Detection</h5><p>Sub-100ms transaction scoring with 99.5% accuracy using ensemble ML models.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🛡️</span>
+              <div class="sol-text"><h5>AML & Compliance Automation</h5><p>Intelligent transaction monitoring, SAR generation and regulatory reporting.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📋</span>
+              <div class="sol-text"><h5>Credit Scoring & Underwriting</h5><p>Alternative data ML models for more accurate and inclusive credit decisions.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🤖</span>
+              <div class="sol-text"><h5>AI-Powered KYC</h5><p>Automated document verification, liveness detection and risk profiling.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">💬</span>
+              <div class="sol-text"><h5>Banking Chatbot & Copilot</h5><p>24/7 intelligent customer service with product recommendations and account insights.</p></div>
+            </div>
+          </div>
+          <div class="outcome-strip">
+            <div class="outcome-item"><div class="outcome-num gradient-text">40%</div><div class="outcome-lbl">Fraud Reduction</div></div>
+            <div class="outcome-item"><div class="outcome-num gradient-text">60%</div><div class="outcome-lbl">Faster KYC</div></div>
+            <div class="outcome-item"><div class="outcome-num gradient-text">3x</div><div class="outcome-lbl">Compliance Efficiency</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINANCE ═══ -->
+<section class="industry-section" id="finance" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="ind-grid reverse">
+      <div class="ind-content reveal-right">
+        <p class="eyebrow">Industry 02</p>
+        <h2>📈 <span class="gradient-text">Finance</span></h2>
+        <p>In today's volatile markets, financial institutions need AI that processes vast datasets in real time — identifying alpha, managing risk and making execution decisions faster than any human team can. AIML Labs delivers quantitative AI built for the speed of modern finance.</p>
+        <p>From hedge funds to insurance companies, our ML-driven financial models adapt continuously to market dynamics, ensuring edge and resilience across all conditions.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;">
+          <span class="badge badge-cyan">Algorithmic Trading</span>
+          <span class="badge badge-cyan">Risk Management</span>
+          <span class="badge badge-cyan">Portfolio Optimization</span>
+          <span class="badge badge-cyan">RegTech</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Explore Finance AI</a>
+      </div>
+      <div class="reveal-left">
+        <div class="ind-panel">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--purple));"></div>
+          <div class="ind-panel-header">
+            <div class="ind-panel-icon ib-cyan">📈</div>
+            <div>
+              <div class="ind-panel-title">Finance AI Platform</div>
+              <div class="ind-panel-sub">Quantitative intelligence for capital markets</div>
+            </div>
+          </div>
+          <div class="solution-list">
+            <div class="solution-item">
+              <span class="sol-check">⚡</span>
+              <div class="sol-text"><h5>Algorithmic Trading Strategies</h5><p>Reinforcement learning agents for high-frequency and systematic trading.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📊</span>
+              <div class="sol-text"><h5>Market Sentiment Analysis</h5><p>NLP on news, filings and social data for real-time market intelligence.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🎯</span>
+              <div class="sol-text"><h5>Portfolio Optimization</h5><p>ML-powered asset allocation balancing return, risk and constraints dynamically.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">⚠️</span>
+              <div class="sol-text"><h5>Credit & Market Risk</h5><p>Stress testing, VaR modelling and counterparty risk assessment with ML.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📑</span>
+              <div class="sol-text"><h5>RegTech & Reporting</h5><p>Automated regulatory reporting, IFRS 9 provisioning and audit trail generation.</p></div>
+            </div>
+          </div>
+          <div class="outcome-strip">
+            <div class="outcome-item"><div class="outcome-num gradient-text">25%</div><div class="outcome-lbl">Alpha Generation</div></div>
+            <div class="outcome-item"><div class="outcome-num gradient-text">50%</div><div class="outcome-lbl">Risk Reduction</div></div>
+            <div class="outcome-item"><div class="outcome-num gradient-text">80%</div><div class="outcome-lbl">Faster Reporting</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HEALTHCARE ═══ -->
+<section class="industry-section" id="healthcare">
+  <div class="container">
+    <div class="ind-grid">
+      <div class="ind-content reveal-left">
+        <p class="eyebrow">Industry 03</p>
+        <h2>🏥 <span class="orange-text">Health Care</span></h2>
+        <p>Healthcare AI must be accurate, explainable and compliant. AIML Labs builds clinical-grade AI systems that assist clinicians, accelerate diagnostics, predict patient risk and reduce administrative burden — all while maintaining strict HIPAA and HL7 compliance.</p>
+        <p>Our healthcare models are trained on diverse, de-identified clinical datasets and validated against rigorous clinical standards before deployment in real-world care settings.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;">
+          <span class="badge badge-orange">Medical Imaging AI</span>
+          <span class="badge badge-orange">Clinical Decision Support</span>
+          <span class="badge badge-orange">HIPAA Compliant</span>
+          <span class="badge badge-orange">Drug Discovery</span>
+        </div>
+        <a href="contact.html" class="btn btn-orange">Explore Healthcare AI</a>
+      </div>
+      <div class="reveal-right">
+        <div class="ind-panel">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-orange);"></div>
+          <div class="ind-panel-header">
+            <div class="ind-panel-icon ib-orange">🏥</div>
+            <div>
+              <div class="ind-panel-title">Healthcare AI Platform</div>
+              <div class="ind-panel-sub">Clinical intelligence for better patient outcomes</div>
+            </div>
+          </div>
+          <div class="solution-list">
+            <div class="solution-item">
+              <span class="sol-check">🩻</span>
+              <div class="sol-text"><h5>Medical Imaging & Diagnostics</h5><p>AI-powered radiology, pathology and dermatology analysis with radiologist-level accuracy.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🧬</span>
+              <div class="sol-text"><h5>Drug Discovery Acceleration</h5><p>ML models for molecular property prediction, target identification and clinical trial optimization.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📋</span>
+              <div class="sol-text"><h5>Clinical Decision Support</h5><p>Real-time patient risk scoring, sepsis prediction and treatment recommendation systems.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📝</span>
+              <div class="sol-text"><h5>Clinical NLP & Documentation</h5><p>Automated medical note generation, ICD coding and prior authorization processing.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📡</span>
+              <div class="sol-text"><h5>Remote Patient Monitoring</h5><p>AI analysis of wearable and IoT health data for proactive, preventive care alerts.</p></div>
+            </div>
+          </div>
+          <div class="outcome-strip">
+            <div class="outcome-item"><div class="outcome-num orange-text">92%</div><div class="outcome-lbl">Diagnostic Accuracy</div></div>
+            <div class="outcome-item"><div class="outcome-num orange-text">35%</div><div class="outcome-lbl">Admin Time Saved</div></div>
+            <div class="outcome-item"><div class="outcome-num orange-text">2x</div><div class="outcome-lbl">Trial Speed</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ E-COMMERCE ═══ -->
+<section class="industry-section" id="ecommerce" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="ind-grid reverse">
+      <div class="ind-content reveal-right">
+        <p class="eyebrow">Industry 04</p>
+        <h2>🛒 <span class="orange-text">E-Commerce</span></h2>
+        <p>E-Commerce success is driven by knowing what customers want before they do, optimising every pricing and logistics decision, and delivering seamless personalised experiences at scale. AIML Labs powers the intelligence layer behind modern online retail.</p>
+        <p>From marketplace platforms to D2C brands, our AI solutions drive measurable improvements in conversion, average order value, retention and supply chain efficiency.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;">
+          <span class="badge badge-gold">Personalisation</span>
+          <span class="badge badge-gold">Dynamic Pricing</span>
+          <span class="badge badge-gold">Demand Forecasting</span>
+          <span class="badge badge-gold">Visual Search</span>
+        </div>
+        <a href="contact.html" class="btn btn-orange">Transform Your E-Commerce</a>
+      </div>
+      <div class="reveal-left">
+        <div class="ind-panel">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-orange);"></div>
+          <div class="ind-panel-header">
+            <div class="ind-panel-icon ib-gold">🛒</div>
+            <div>
+              <div class="ind-panel-title">E-Commerce AI Suite</div>
+              <div class="ind-panel-sub">Intelligence that drives conversions and loyalty</div>
+            </div>
+          </div>
+          <div class="solution-list">
+            <div class="solution-item">
+              <span class="sol-check">🎯</span>
+              <div class="sol-text"><h5>Personalisation Engine</h5><p>Real-time product recommendations personalised to each user's behaviour and context.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">💰</span>
+              <div class="sol-text"><h5>Dynamic Pricing Optimization</h5><p>ML models that adjust pricing in real time based on demand, competition and inventory.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">📦</span>
+              <div class="sol-text"><h5>Demand Forecasting & Inventory</h5><p>Accurate demand prediction that reduces stockouts and overstock by up to 40%.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🔍</span>
+              <div class="sol-text"><h5>Visual Search & Discovery</h5><p>Computer vision that lets shoppers search by image — boosting discovery and conversion.</p></div>
+            </div>
+            <div class="solution-item">
+              <span class="sol-check">🔄</span>
+              <div class="sol-text"><h5>Churn Prediction & Retention</h5><p>Identify at-risk customers and trigger personalised win-back campaigns automatically.</p></div>
+            </div>
+          </div>
+          <div class="outcome-strip">
+            <div class="outcome-item"><div class="outcome-num orange-text">32%</div><div class="outcome-lbl">Revenue Uplift</div></div>
+            <div class="outcome-item"><div class="outcome-num orange-text">45%</div><div class="outcome-lbl">Churn Reduction</div></div>
+            <div class="outcome-item"><div class="outcome-num orange-text">28%</div><div class="outcome-lbl">Cart Conversion</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="eyebrow" style="justify-content:center;">Your Industry, Our Expertise</p>
+      <h2>Let's Build AI for<br/><span class="gradient-text">Your Sector</span></h2>
+      <p>Every industry has unique challenges. Let our domain experts design an AI strategy tailored to your regulatory environment, data landscape and growth goals.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Request an Industry Demo</a>
+        <a href="services.html" class="btn btn-ghost">View Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></div>
+        <p>AIML Labs Pvt Ltd delivers transformative AI solutions across Banking, Finance, Healthcare and E-Commerce.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">⌥</a><a href="#" class="social-btn">▶</a>
+        </div>
+      </div>
+      <div><p class="footer-col-title">Company</p><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div></div>
+      <div><p class="footer-col-title">Services</p><div class="footer-links"><a href="services.html#ml">Machine Learning</a><a href="services.html#ai">Artificial Intelligence</a><a href="services.html#genai">Generative AI</a><a href="services.html#agentic">Agentic AI</a></div></div>
+      <div><p class="footer-col-title">Industries</p><div class="footer-links"><a href="#banking">Banking</a><a href="#finance">Finance</a><a href="#healthcare">Health Care</a><a href="#ecommerce">E-Commerce</a></div></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AIML Labs Pvt Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
