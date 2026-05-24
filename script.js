@@ -225,12 +225,13 @@ function initThreeJS() {
   window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+      const isLight = document.body.classList.contains('light-theme');
       if (window.scrollY > 50) {
         navbar.style.height = '80px';
-        navbar.style.background = 'rgba(5, 5, 5, 0.85)';
+        navbar.style.background = isLight ? 'rgba(245, 245, 247, 0.92)' : 'rgba(5, 5, 5, 0.85)';
       } else {
         navbar.style.height = '100px';
-        navbar.style.background = 'rgba(5, 5, 5, 0.4)';
+        navbar.style.background = isLight ? 'rgba(245, 245, 247, 0.4)' : 'rgba(5, 5, 5, 0.4)';
       }
     }
   });
