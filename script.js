@@ -127,49 +127,99 @@ function initThreeJS() {
   if(!canvas) return;
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
   
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Abstract Torus Knot Geometry (Advanced look)
-  const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
-  const material = new THREE.PointsMaterial({
-    size: 0.05,
-    color: 0x00B4D8,
-    transparent: true,
-    opacity: 0.8,
-    blending: THREE.AdditiveBlending
-  });
-  
-  const mesh = new THREE.Points(geometry, material);
-  scene.add(mesh);
-  
-  camera.position.z = 30;
+  // Organic Neural-wave particle field
+  const count = 3000;
+  const positions = new Float32Array(count * 3);
+  const originalY = new Float32Array(count);
 
-  // Mouse interactivity
-  let mouseX = 0;
-  let mouseY = 0;
+  for (let i = 0; i < count; i++) {
+    // Distribute particles in a wide flowing sheet
+    const x = (Math.random() - 0.5) * 80;
+    const y = (Math.random() - 0.5) * 40;
+    const z = (Math.random() - 0.5) * 60;
+
+    positions[i * 3] = x;
+    positions[i * 3 + 1] = y;
+    positions[i * 3 + 2] = z;
+
+    originalY[i] = y;
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+  // Custom high-end glowing particles
+  const material = new THREE.PointsMaterial({
+    size: 0.12,
+    color: 0x00B4D8, // Cyan base
+    transparent: true,
+    opacity: 0.7,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+  });
+
+  const points = new THREE.Points(geometry, material);
+  scene.add(points);
+
+  camera.position.z = 35;
+  camera.position.y = 5;
+
+  // Interactivity (Smooth damping mouse control)
+  let mouseX = 0, mouseY = 0;
+  let targetX = 0, targetY = 0;
+
   document.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX - window.innerWidth/2) * 0.0005;
-    mouseY = (e.clientY - window.innerHeight/2) * 0.0005;
+    targetX = (e.clientX - window.innerWidth / 2) * 0.005;
+    targetY = (e.clientY - window.innerHeight / 2) * 0.005;
+  });
+
+  // Dynamic shrinking navbar logic
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      if (window.scrollY > 50) {
+        navbar.style.height = '80px';
+        navbar.style.background = 'rgba(5, 5, 5, 0.85)';
+      } else {
+        navbar.style.height = '100px';
+        navbar.style.background = 'rgba(5, 5, 5, 0.4)';
+      }
+    }
   });
 
   const clock = new THREE.Clock();
+
   function tick() {
     const elapsedTime = clock.getElapsedTime();
-    
-    mesh.rotation.y += 0.05 * (mouseX - mesh.rotation.y);
-    mesh.rotation.x += 0.05 * (mouseY - mesh.rotation.x);
-    mesh.rotation.z = elapsedTime * 0.1;
-    
-    // Pulse effect
-    mesh.scale.set(
-      1 + Math.sin(elapsedTime) * 0.1,
-      1 + Math.cos(elapsedTime) * 0.1,
-      1 + Math.sin(elapsedTime) * 0.1
-    );
+
+    // Smooth inertia for mouse interactivity
+    mouseX += (targetX - mouseX) * 0.05;
+    mouseY += (targetY - mouseY) * 0.05;
+
+    points.rotation.y = elapsedTime * 0.03 + mouseX * 0.5;
+    points.rotation.x = mouseY * 0.3;
+
+    // Organic neural wave undulations
+    const positionsArr = geometry.attributes.position.array;
+    for (let i = 0; i < count; i++) {
+      const i3 = i * 3;
+      const x = positionsArr[i3];
+      const z = positionsArr[i3 + 2];
+      
+      // Undulation based on double sine wave patterns
+      positionsArr[i3 + 1] = originalY[i] + Math.sin(elapsedTime * 1.5 + x * 0.15) * 3 + Math.cos(elapsedTime * 1.2 + z * 0.15) * 2;
+    }
+    geometry.attributes.position.needsUpdate = true;
+
+    // Color shifting gradient over time
+    const hue = (elapsedTime * 0.05) % 1;
+    material.color.setHSL(hue, 0.8, 0.6);
 
     renderer.render(scene, camera);
     requestAnimationFrame(tick);
