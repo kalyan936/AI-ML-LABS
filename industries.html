@@ -35,16 +35,15 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <section class="section container" style="padding-top: 25vh;">
+  <!-- SECTION 1: HERO SECTORS -->
+  <section class="section container" id="industries-hero" style="padding-top: 25vh; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">SECTOR</span></div></h1>
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">DEGREES</div></h1>
   </section>
 
-  <!-- Industries Grid -->
-  <section class="section container" style="margin-bottom: 10vh;">
-    <div class="grid-2" style="gap: 6vh;">
-      
+  <!-- SECTION 2: FINANCE & HEALTH -->
+  <section class="section container" id="industries-fh" style="min-height: 90vh; display: flex; align-items: center;">
+    <div class="grid-2" style="gap: 6vh; width: 100%;">
       <!-- Finance -->
       <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
         <div>
@@ -84,7 +83,12 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- SECTION 3: COMMERCE & DEFENSE -->
+  <section class="section container" id="industries-cd" style="min-height: 90vh; display: flex; align-items: center;">
+    <div class="grid-2" style="gap: 6vh; width: 100%;">
       <!-- Commerce -->
       <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
         <div>
@@ -124,7 +128,31 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- SECTION 4: IMPACT MATRIX -->
+  <section class="section container" id="industries-matrix" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; margin-bottom: 10vh;">
+    <div style="margin-bottom: 8vh;">
+      <h2 class="display-large" style="overflow:hidden;"><div class="split-line">DEPLOYMENT</div></h2>
+      <h2 class="display-large" style="overflow:hidden;"><div class="split-line"><span class="gradient-text">MATRIX LOGS</span></div></h2>
+    </div>
+    <div class="grid-3">
+      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-purple);">
+        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); display:block; margin-bottom: 1vh;">[ TRANSACTION_SPEED ]</span>
+        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">220K/S</h2>
+        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Concurrent Arbitrage Operations</p>
+      </div>
+      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-cyan);">
+        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); display:block; margin-bottom: 1vh;">[ SCAN_DIAGNOSTICS ]</span>
+        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">&lt;40MS</h2>
+        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Cell Segmentation Speed</p>
+      </div>
+      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-orange);">
+        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); display:block; margin-bottom: 1vh;">[ EDGE_Quantization ]</span>
+        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">92%</h2>
+        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Tactical Model Shrinkage Ratio</p>
+      </div>
     </div>
   </section>
 

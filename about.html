@@ -35,16 +35,17 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="section container" style="padding-top: 25vh;">
+  <!-- SECTION 1: HERO -->
+  <section class="section container" id="about-hero" style="padding-top: 25vh; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">ORIGIN</span></div></h1>
     <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">THESIS</div></h1>
   </section>
 
-  <!-- Founder Block & Company Story -->
-  <section class="section container">
-    <div class="grid-2">
+  <!-- SECTION 2: FOUNDATIONAL HISTORY -->
+  <section class="section container" id="about-origin" style="min-height: 90vh; display: flex; align-items: center;">
+    <div class="grid-2" style="align-items: center;">
       <div style="overflow: hidden;">
+        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); display:block; margin-bottom: 2vh;">[ FOUNDING_2021 ]</span>
         <p class="text-body split-line" style="font-size: clamp(1.4rem, 2vw, 1.8rem); color: var(--text); line-height: 1.6; margin-bottom: 4vh;">
           Founded in <span style="color: var(--accent-cyan); font-weight: 700;">2021</span> in Bengaluru, AIML LABS was born from a fundamental thesis: academic neural intelligence must be translated into robust, deterministic systems for enterprise operation.
         </p>
@@ -65,8 +66,8 @@
     </div>
   </section>
 
-  <!-- Core Values / Philosophy Grid -->
-  <section class="section container">
+  <!-- SECTION 3: CORE PILLARS -->
+  <section class="section container" id="about-pillars" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center;">
     <h2 class="display-large" style="margin-bottom: 8vh;"><span class="gradient-text">CORE PILLARS</span></h2>
     <div class="grid-3">
       <div class="glass-panel">
@@ -84,8 +85,8 @@
     </div>
   </section>
 
-  <!-- Timeline of Milestones -->
-  <section class="section container" style="margin-bottom: 10vh;">
+  <!-- SECTION 4: EVOLUTION TIMELINE -->
+  <section class="section container" id="about-timeline" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center;">
     <h2 class="display-large" style="margin-bottom: 8vh;">SYSTEM <span class="gradient-text">EVOLUTION</span></h2>
     <div style="display: flex; flex-direction: column; gap: 4vh;">
       <div class="glass-panel" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2vh;">
@@ -110,6 +111,37 @@
           <h3 class="display-med" style="font-size: 1.3rem; margin-top: 1vh; color: white;">PETABYTE SCALE TRAINER</h3>
         </div>
         <p class="text-body" style="max-width: 600px; font-size: 1rem;">Released proprietary reinforcement learning pipelines. Models dynamically self-correct weight representations, allowing autonomous edge adaptation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ACTIVE RESEARCH CORE -->
+  <section class="section container" id="about-research" style="min-height: 90vh; display: flex; align-items: center; margin-bottom: 10vh;">
+    <div class="grid-2">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <h2 class="display-large" style="margin-bottom: 4vh; overflow: hidden;">
+          <div class="split-line">ACTIVE R&amp;D</div>
+          <div class="split-line"><span class="gradient-text">FRONTIERS</span></div>
+        </h2>
+        <p class="text-body" style="margin-bottom: 3vh;">
+          Our lab operates on the leading edge of quantum-neural integration. We are presently developing bio-computation protocols that map synaptic weight changes onto synthetic, silicon hardware structures.
+        </p>
+        <p class="text-body">
+          We ensure strict security bounds on all local models using physical cryptographic container blocks, completely eliminating the risk of data leakage or prompt contamination.
+        </p>
+      </div>
+      <div>
+        <div class="glass-panel" style="border-top: 4px solid var(--accent-cyan); display:flex; flex-direction:column; gap: 3vh;">
+          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan);">[ R&amp;D_METADATA ]</span>
+          <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 2vh;">
+            <h4 style="color: white; margin-bottom: 1vh;">QUANTUM SYNAPSE</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Mapping multi-dimensional tensor metrics to sparse, ultra-fast computational matrices.</p>
+          </div>
+          <div>
+            <h4 style="color: white; margin-bottom: 1vh;">CRYPTO-CONTAINER</h4>
+            <p class="text-body" style="font-size: 0.9rem;">Physical isolation models isolating active weights during edge inference execution.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
