@@ -1,58 +1,124 @@
 // Wait for DOM
 document.addEventListener("DOMContentLoaded", () => {
-  // GSAP Registration
   gsap.registerPlugin(ScrollTrigger);
 
-  // ── 1. Page Transition Loader ──
-  const tl = gsap.timeline();
-  tl.to(".page-transition", {
-    duration: 1.2,
-    yPercent: -100,
-    ease: "power4.inOut",
-    delay: 0.5
-  }).from(".hero h1", {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    ease: "power4.out",
-    stagger: 0.2
-  }, "-=0.5").from(".hero .btn-glitch", {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power4.out"
-  }, "-=0.8");
-
-  // ── 2. Scroll Reveal Animations ──
-  const revealElements = document.querySelectorAll(".gsap-reveal");
-  revealElements.forEach((el) => {
-    gsap.fromTo(el, {
-      autoAlpha: 0,
-      y: 60
-    }, {
-      autoAlpha: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-        toggleActions: "play none none reverse"
+  // 1. Preloader Removal
+  setTimeout(() => {
+    gsap.to('.preloader', {
+      yPercent: -100, duration: 1.5, ease: 'power4.inOut',
+      onComplete: () => {
+        document.querySelector('.preloader').style.display = 'none';
+        initScrollAnimations();
       }
+    });
+  }, 1000);
+
+  // 2. Lenis Smooth Scroll Setup
+  const lenis = new window.Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // 3. Custom Cursor Logic
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
+  
+  if(cursorDot && cursorOutline) {
+    window.addEventListener('mousemove', (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 150, fill: "forwards" });
+    });
+
+    // Hover states for links and buttons
+    const interactables = document.querySelectorAll('a, button, .magnetic-btn');
+    interactables.forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+  }
+
+  // 4. Magnetic Buttons
+  const magneticBtns = document.querySelectorAll('.magnetic-btn');
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      gsap.to(btn, { duration: 0.3, x: x * 0.4, y: y * 0.4, ease: 'power2.out' });
+    });
+    btn.addEventListener('mouseleave', () => {
+      gsap.to(btn, { duration: 0.7, x: 0, y: 0, ease: 'elastic.out(1, 0.3)' });
     });
   });
 
-  // Navbar background on scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    if(window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
+  // 5. GSAP Advanced Animations (Called after preloader)
+  function initScrollAnimations() {
+    // Parallax Images
+    const imgReveals = document.querySelectorAll('.img-reveal img');
+    imgReveals.forEach(img => {
+      gsap.to(img, {
+        yPercent: -20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: img.parentElement,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
 
-  // ── 3. ThreeJS Neural Network Background ──
+    // Reveal Grid Items
+    const glassPanels = document.querySelectorAll('.glass-panel');
+    glassPanels.forEach(panel => {
+      gsap.fromTo(panel, 
+        { y: 100, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 1.5, ease: 'power4.out',
+          scrollTrigger: {
+            trigger: panel,
+            start: "top 85%",
+          }
+        }
+      );
+    });
+
+    // Simple Split Text Effect (by splitting lines manually via HTML for simplicity)
+    const splitTexts = document.querySelectorAll('.split-line');
+    splitTexts.forEach(line => {
+      gsap.fromTo(line, 
+        { y: '100%', opacity: 0 },
+        { 
+          y: '0%', opacity: 1, duration: 1.2, ease: 'power4.out',
+          scrollTrigger: { trigger: line.parentElement, start: "top 80%" }
+        }
+      );
+    });
+  }
+
+  // 6. Three.js Background Array WebGL
   initThreeJS();
 });
 
@@ -61,66 +127,53 @@ function initThreeJS() {
   if(!canvas) return;
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
   
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Particles
-  const particlesGeometry = new THREE.BufferGeometry();
-  const particlesCount = 700;
-  
-  const posArray = new Float32Array(particlesCount * 3);
-  for(let i = 0; i < particlesCount * 3; i++) {
-    posArray[i] = (Math.random() - 0.5) * 15;
-  }
-  
-  particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-  
+  // Abstract Torus Knot Geometry (Advanced look)
+  const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
   const material = new THREE.PointsMaterial({
-    size: 0.02,
-    color: 0x00F0FF,
+    size: 0.05,
+    color: 0x00B4D8,
     transparent: true,
     opacity: 0.8,
     blending: THREE.AdditiveBlending
   });
   
-  const particlesMesh = new THREE.Points(particlesGeometry, material);
-  scene.add(particlesMesh);
+  const mesh = new THREE.Points(geometry, material);
+  scene.add(mesh);
   
-  camera.position.z = 3;
+  camera.position.z = 30;
 
-  // Mouse Interaction
+  // Mouse interactivity
   let mouseX = 0;
   let mouseY = 0;
-  let targetX = 0;
-  let targetY = 0;
-  const windowHalfX = window.innerWidth / 2;
-  const windowHalfY = window.innerHeight / 2;
-
-  document.addEventListener('mousemove', (event) => {
-    mouseX = (event.clientX - windowHalfX);
-    mouseY = (event.clientY - windowHalfY);
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth/2) * 0.0005;
+    mouseY = (e.clientY - window.innerHeight/2) * 0.0005;
   });
 
-  // Animation Loop
   const clock = new THREE.Clock();
-  
-  const tick = () => {
+  function tick() {
     const elapsedTime = clock.getElapsedTime();
     
-    targetX = mouseX * 0.001;
-    targetY = mouseY * 0.001;
+    mesh.rotation.y += 0.05 * (mouseX - mesh.rotation.y);
+    mesh.rotation.x += 0.05 * (mouseY - mesh.rotation.x);
+    mesh.rotation.z = elapsedTime * 0.1;
     
-    particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
-    particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
-    particlesMesh.rotation.z = elapsedTime * 0.05;
-    
+    // Pulse effect
+    mesh.scale.set(
+      1 + Math.sin(elapsedTime) * 0.1,
+      1 + Math.cos(elapsedTime) * 0.1,
+      1 + Math.sin(elapsedTime) * 0.1
+    );
+
     renderer.render(scene, camera);
-    window.requestAnimationFrame(tick);
-  };
-  
+    requestAnimationFrame(tick);
+  }
   tick();
 
   window.addEventListener('resize', () => {

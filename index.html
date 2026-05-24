@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AIML Labs | Most Advanced AI Solutions</title>
+  <title>AIML LABS | Intelligence Architected</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" type="image/png" href="public/logo.png"/>
-  
-  <!-- GSAP & ScrollTrigger -->
+
+  <!-- GSAP & Lenis via CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  
   <!-- ThreeJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
-  <!-- Page Transition Loader -->
-  <div class="page-transition">
-    <img src="public/logo.png" alt="Loading" class="transition-logo"/>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-text">INITIALIZING AIML</div>
   </div>
 
   <!-- WebGL Background -->
@@ -26,104 +30,84 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="public/logo.png" alt="AIML Labs"/>
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="industries.html">Industries</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <a href="index.html" class="brand-group">
+      <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
+      <span class="brand-name">AIML LABS</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero container">
-    <div class="hero-content">
-      <h1>
-        <div><span class="gradient-text">Architecting</span></div>
-        <div>The Future of</div>
-        <div>Intelligence.</div>
-      </h1>
-      <p class="sec-sub" style="font-size: 1.4rem; color: #fff;">Deploying cutting-edge Machine Learning and Autonomous Agentic Systems for the world's most critical enterprises.</p>
-      <a href="services.html" class="btn-glitch">Discover Solutions</a>
+  <section class="section" style="height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+    <div class="container" style="text-align: center; z-index: 2;">
+      <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">COGNITIVE</div></h1>
+      <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">ARCHITECTS</span></div></h1>
+      <p class="text-body" style="max-width: 600px; margin: 3vh auto; overflow: hidden;">
+        <span class="split-line" style="display:inline-block;">Engineering autonomous intelligence for the global enterprise.</span>
+      </p>
+      <div style="margin-top: 5vh; overflow: hidden;">
+        <div class="split-line" style="display: inline-block;">
+          <a href="services.html" class="magnetic-btn">Deploy Systems</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Features Grid -->
+  <!-- Image Parallax Break -->
+  <section class="section" style="padding: 0;">
+    <div class="img-reveal" style="height: 60vh; border-radius: 0;">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" alt="Abstract Tech AI"/>
+    </div>
+  </section>
+
+  <!-- Core Systems -->
   <section class="section container">
-    <div class="gsap-reveal">
-      <h2 class="sec-title">Core <span class="gradient-text">Engines</span></h2>
-      <p class="sec-sub">Our proprietary intelligence stacks driving enterprise transformation.</p>
+    <div style="margin-bottom: 10vh;">
+      <h2 class="display-large" style="overflow:hidden;"><div class="split-line">CORE</div></h2>
+      <h2 class="display-large" style="overflow:hidden;"><div class="split-line"><span class="gradient-text">SYSTEMS</span></div></h2>
     </div>
     
     <div class="grid-2">
-      <div class="glass-card gsap-reveal d-1">
-        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-cyan);">01 // Machine Learning</h3>
-        <p style="color: var(--text-muted); line-height: 1.8;">High-frequency predictive models processing petabytes of data for anomaly detection and forecasting.</p>
+      <div class="glass-panel">
+        <h3 class="display-med" style="color: var(--accent-cyan); margin-bottom: 2vh;">01 / MACHINE LEARNING</h3>
+        <p class="text-body">High-frequency predictive topology operating on petabytes of unstructured data.</p>
       </div>
-      <div class="glass-card gsap-reveal d-2">
-        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-purple);">02 // Gen AI & RAG</h3>
-        <p style="color: var(--text-muted); line-height: 1.8;">Domain-adapted Large Language Models grounded in your enterprise data for precise, hallucination-free output.</p>
+      <div class="glass-panel">
+        <h3 class="display-med" style="color: var(--accent-purple); margin-bottom: 2vh;">02 / GENERATIVE AI</h3>
+        <p class="text-body">Fine-tuned Large Language Models grounded strictly in your enterprise domain.</p>
       </div>
-      <div class="glass-card gsap-reveal d-1">
-        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-cyan);">03 // Autonomous Agents</h3>
-        <p style="color: var(--text-muted); line-height: 1.8;">Self-orchestrating multi-agent networks capable of reasoning, tool-use, and complex workflow execution.</p>
+      <div class="glass-panel">
+        <h3 class="display-med" style="color: var(--accent-orange); margin-bottom: 2vh;">03 / AUTONOMOUS AGENTS</h3>
+        <p class="text-body">Self-orchestrating multi-agent networks resolving complex workflow structures without human intervention.</p>
       </div>
-      <div class="glass-card gsap-reveal d-2">
-        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent-purple);">04 // Computer Vision</h3>
-        <p style="color: var(--text-muted); line-height: 1.8;">Real-time spatial computing and defect detection models deployed on edge infrastructure.</p>
+      <div class="glass-panel">
+        <h3 class="display-med" style="color: var(--text); margin-bottom: 2vh;">04 / COMPUTER VISION</h3>
+        <p class="text-body">Spatial computing models for real-time defect anomaly detection at edge locations.</p>
       </div>
     </div>
   </section>
 
-  <!-- Metrics -->
+  <!-- CTA -->
   <section class="section container" style="text-align: center;">
-    <h2 class="sec-title gsap-reveal">By The <span class="gradient-text">Numbers</span></h2>
-    <div class="grid-4" style="margin-top: 4rem;">
-      <div class="gsap-reveal d-1">
-        <div style="font-size: 4rem; font-weight: 800; font-family:'Space Grotesk', sans-serif;">150+</div>
-        <div style="color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-top: 1rem;">Models Deployed</div>
-      </div>
-      <div class="gsap-reveal d-2">
-        <div style="font-size: 4rem; font-weight: 800; font-family:'Space Grotesk', sans-serif;">12M+</div>
-        <div style="color: var(--accent-purple); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-top: 1rem;">Daily Inferences</div>
-      </div>
-      <div class="gsap-reveal d-3">
-        <div style="font-size: 4rem; font-weight: 800; font-family:'Space Grotesk', sans-serif;">99.9%</div>
-        <div style="color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-top: 1rem;">Model Uptime</div>
-      </div>
-      <div class="gsap-reveal d-4">
-        <div style="font-size: 4rem; font-weight: 800; font-family:'Space Grotesk', sans-serif;">4</div>
-        <div style="color: var(--accent-purple); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-top: 1rem;">Core Industries</div>
-      </div>
-    </div>
+    <h2 class="display-large" style="margin-bottom: 5vh; overflow:hidden;"><div class="split-line">INITIALIZE.</div></h2>
+    <a href="contact.html" class="magnetic-btn">Establish Connection</a>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="public/logo.png" alt="AIML Labs" style="height: 40px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);"/>
-        <p style="color: var(--text-muted); max-width: 300px;">Architecting the future of enterprise intelligence.</p>
-      </div>
-      <div>
-        <h4 style="margin-bottom: 1.5rem; color: #fff;">Navigation</h4>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-        </div>
-      </div>
-      <div>
-        <h4 style="margin-bottom: 1.5rem; color: #fff;">Contact</h4>
-        <div class="footer-links">
-          <a href="mailto:hr@ai-mllabs.com">hr@ai-mllabs.com</a>
-          <a href="mailto:bharath@ai-mllabs.com">bharath@ai-mllabs.com</a>
-          <a href="tel:7760309798">+91 7760309798</a>
+    <div class="container">
+      <h2 class="footer-large-text">AIML LABS</h2>
+      <div class="footer-bottom">
+        <div>© 2026 AIML LABS PVT LTD</div>
+        <div style="display:flex; gap: 2vw;">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
         </div>
       </div>
     </div>
