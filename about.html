@@ -3,334 +3,80 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="About AIML Labs Pvt Ltd — Our story, mission, values and the team behind cutting-edge AI innovation."/>
-  <title>About Us | AIML Labs Pvt Ltd</title>
-  <link rel="stylesheet" href="assets/styles.css"/>
-  <link rel="icon" type="image/png" href="assets/logo.png"/>
-  <style>
-    .mission-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 5rem; }
-    .mv-card {
-      padding: 2.5rem; border-radius: var(--r-xl); position: relative; overflow: hidden;
-    }
-    .mv-card-mission { background: rgba(107,33,232,0.1); border: 1px solid rgba(107,33,232,0.25); }
-    .mv-card-vision  { background: rgba(0,180,216,0.08); border: 1px solid rgba(0,180,216,0.25); }
-    .mv-card::before {
-      content:''; position:absolute; top:0; left:0; right:0; height:3px;
-    }
-    .mv-card-mission::before { background: var(--grad-primary); }
-    .mv-card-vision::before  { background: linear-gradient(90deg,var(--cyan),var(--purple)); }
-    .mv-icon { font-size: 3rem; margin-bottom: 1.25rem; }
-    .mv-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
-    .mv-card p  { color: var(--text-secondary); line-height: 1.85; }
-    .timeline { position: relative; padding-left: 2.5rem; }
-    .timeline::before {
-      content:''; position:absolute; left:0; top:0; bottom:0;
-      width:2px; background: linear-gradient(180deg, var(--purple), var(--cyan), transparent);
-    }
-    .timeline-item { position: relative; padding-bottom: 3rem; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-dot {
-      position:absolute; left:-3rem; top:0; width:20px; height:20px; border-radius:50%;
-      background: var(--grad-primary); box-shadow: 0 0 15px rgba(107,33,232,0.5);
-      display:flex; align-items:center; justify-content:center;
-    }
-    .timeline-dot::after {
-      content:''; width:8px; height:8px; border-radius:50%; background:white;
-    }
-    .timeline-year {
-      font-family:'Space Grotesk',sans-serif; font-size:0.78rem; font-weight:700;
-      color:var(--cyan); letter-spacing:.1em; text-transform:uppercase; margin-bottom:.5rem;
-    }
-    .timeline-item h4 { font-size:1.1rem; margin-bottom:.5rem; }
-    .timeline-item p  { color:var(--text-secondary); font-size:0.9rem; line-height:1.75; }
-    .tech-stack-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
-    .tech-card {
-      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md);
-      padding:1.5rem; text-align:center; transition:var(--tr);
-    }
-    .tech-card:hover { border-color:rgba(107,33,232,0.4); transform:translateY(-5px); }
-    .tech-icon { font-size:2.2rem; margin-bottom:.75rem; }
-    .tech-name { font-size:.88rem; font-weight:600; }
-    @media(max-width:1024px) {
-      .mission-vision { grid-template-columns:1fr; }
-      .tech-stack-grid { grid-template-columns:repeat(3,1fr); }
-    }
-    @media(max-width:768px) {
-      .tech-stack-grid { grid-template-columns:repeat(2,1fr); }
-    }
-  </style>
+  <title>About | AIML Labs</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="public/logo.png"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="industries.html">Industries</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta">Get In Touch</a>
-    </div>
-    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a><a href="services.html">Services</a>
-  <a href="industries.html">Industries</a><a href="about.html" class="active">About</a><a href="contact.html">Contact</a>
-</div>
+  <div class="page-transition"><img src="public/logo.png" alt="Loading" class="transition-logo"/></div>
+  <canvas id="webgl-canvas"></canvas>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-grid"></div>
-  <div class="container">
-    <div class="page-hero-content">
-      <p class="eyebrow">Our Story</p>
-      <h1>We Are <span class="gradient-text">AIML Labs</span><br/>Pvt Ltd</h1>
-      <p>A team of researchers, engineers and domain experts united by one mission — to make artificial intelligence a genuine competitive advantage for every enterprise we partner with.</p>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="public/logo.png" alt="AIML Labs"/></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- STORY SECTION -->
-<section class="section">
-  <div class="container">
-    <div class="about-story">
-      <div class="reveal-left">
-        <div class="story-img">
-          <div class="story-img-inner">
-            <div class="story-img-logo"><img src="assets/logo.png" alt="AIML Labs"/></div>
-            <h3 style="font-size:1.6rem;margin-bottom:.5rem;">AIML Labs Pvt Ltd</h3>
-            <p style="color:var(--text-secondary);font-size:.9rem;">Intelligence · Innovation · Impact</p>
-            <div style="display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem;">
-              <span class="badge badge-purple">ML</span>
-              <span class="badge badge-cyan">AI</span>
-              <span class="badge badge-orange">Gen AI</span>
-              <span class="badge badge-gold">Agentic AI</span>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;text-align:left;">
-              <div style="padding:1rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--r-md);">
-                <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">150+</div>
-                <div style="font-size:.78rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.07em;">Projects</div>
-              </div>
-              <div style="padding:1rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--r-md);">
-                <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">80+</div>
-                <div style="font-size:.78rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.07em;">Clients</div>
-              </div>
-            </div>
-          </div>
+  <section class="hero container">
+    <div class="hero-content">
+      <h1><span class="gradient-text">Entity</span> Genesis</h1>
+      <p class="sec-sub" style="font-size: 1.4rem; color: #fff;">Founded in 2021, AIML Labs emerged from a singularity of research excellence and enterprise application.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="grid-2">
+      <div class="gsap-reveal d-1">
+        <h2 class="sec-title">Our <span class="gradient-text">Evolution</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+          Established in <strong style="color:var(--accent-cyan);">2021</strong>, AIML Labs was built on a foundational thesis: the gap between academic AI research and robust enterprise deployment was too wide.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.8;">
+          We assembled a neural network of top-tier AI researchers, ML engineers, and domain experts. Today, we architect the most advanced intelligence systems for global enterprises.
+        </p>
+      </div>
+      <div class="glass-card gsap-reveal d-2" style="display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <div style="font-size: 5rem; font-weight: 900; font-family:'Space Grotesk',sans-serif; background: linear-gradient(135deg, #00F0FF, #7000FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2021</div>
+        <div style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em;">Year Founded</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="public/logo.png" alt="AIML Labs" style="height: 40px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);"/>
+        <p style="color: var(--text-muted); max-width: 300px;">Architecting the future of enterprise intelligence.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1.5rem; color: #fff;">Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
         </div>
       </div>
-      <div class="reveal-right">
-        <p class="eyebrow">Who We Are</p>
-        <h2 class="section-title">Built by AI Researchers,<br/>for the Real World</h2>
-        <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.25rem;">AIML Labs Pvt Ltd was founded with a singular vision — bridge the gap between cutting-edge AI research and practical enterprise deployment. Too often, organisations invest in AI that never makes it to production. We exist to change that.</p>
-        <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:1.25rem;">Our team combines deep research expertise from leading AI institutions with years of hands-on enterprise delivery experience. We don't just build models — we engineer AI systems that are robust, explainable, compliant and continuously improving in production.</p>
-        <p style="color:var(--text-secondary);line-height:1.85;margin-bottom:2rem;">From a lean startup team to a full-service AI company serving enterprises across Banking, Finance, Healthcare and E-Commerce — AIML Labs has grown by delivering measurable results every single engagement.</p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-primary">Work With Us</a>
-          <a href="services.html" class="btn btn-ghost">Our Services</a>
+      <div>
+        <h4 style="margin-bottom: 1.5rem; color: #fff;">Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:hr@ai-mllabs.com">hr@ai-mllabs.com</a>
+          <a href="mailto:bharath@ai-mllabs.com">bharath@ai-mllabs.com</a>
+          <a href="tel:7760309798">+91 7760309798</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- MISSION & VISION -->
-<section class="section" style="background:var(--bg-secondary);padding-top:0;padding-bottom:80px;">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">What Drives Us</p>
-      <h2 class="section-title">Mission &amp; Vision</h2>
-    </div>
-    <div class="mission-vision">
-      <div class="mv-card mv-card-mission reveal-left">
-        <div class="mv-icon">🎯</div>
-        <h3>Our Mission</h3>
-        <p>To democratise enterprise AI — making world-class Machine Learning, Artificial Intelligence, Generative AI and Agentic AI accessible, practical and transformative for every organisation, regardless of size or technical maturity.</p>
-        <p style="margin-top:1rem;">We do this by combining research excellence with engineering rigour and deep industry knowledge — delivering AI that works reliably in the real world.</p>
-      </div>
-      <div class="mv-card mv-card-vision reveal-right">
-        <div class="mv-icon">🔭</div>
-        <h3>Our Vision</h3>
-        <p>A world where every enterprise operates with the intelligence of a next-generation AI organisation — where decisions are data-driven, operations are autonomous, and human talent is amplified by intelligent machines.</p>
-        <p style="margin-top:1rem;">AIML Labs aspires to be the most trusted AI partner for businesses navigating the intelligence revolution — from first ML model to fully autonomous AI operations.</p>
-      </div>
-    </div>
-
-    <!-- Values -->
-    <div class="section-header centered reveal" style="margin-top:2rem;">
-      <p class="eyebrow">What We Stand For</p>
-      <h2 class="section-title">Our Core Values</h2>
-    </div>
-    <div class="values-grid">
-      <div class="value-card reveal d-1">
-        <div class="value-icon">🔬</div>
-        <h4>Research Excellence</h4>
-        <p>We stay at the frontier of AI — continuously learning, experimenting and applying the latest research to our client solutions.</p>
-      </div>
-      <div class="value-card reveal d-2">
-        <div class="value-icon">🤝</div>
-        <h4>Client Partnership</h4>
-        <p>We treat every client as a long-term partner — deeply invested in their success, not just project delivery.</p>
-      </div>
-      <div class="value-card reveal d-3">
-        <div class="value-icon">🔒</div>
-        <h4>Responsible AI</h4>
-        <p>We build AI that is fair, explainable, secure and aligned with ethical principles and regulatory requirements.</p>
-      </div>
-      <div class="value-card reveal d-4">
-        <div class="value-icon">📊</div>
-        <h4>Results Obsession</h4>
-        <p>Every project is measured by business impact — not just technical metrics. We're not done until you see real ROI.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- JOURNEY TIMELINE -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
-      <div class="reveal-left">
-        <p class="eyebrow">Our Journey</p>
-        <h2 class="section-title">Milestones That<br/>Shaped Us</h2>
-        <p style="color:var(--text-secondary);line-height:1.85;">From founding to becoming a full-service AI company — here's how AIML Labs has grown and evolved.</p>
-      </div>
-      <div class="timeline reveal-right">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2020 — Founded</div>
-          <h4>AIML Labs Established</h4>
-          <p>Founded by a group of AI researchers with a mission to make enterprise AI practical and impactful.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2021 — First 25 Clients</div>
-          <h4>ML Solutions for Banking</h4>
-          <p>Delivered our first major banking AI deployments — fraud detection and credit scoring models now processing millions of transactions.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2022 — Healthcare Expansion</div>
-          <h4>Clinical AI Division Launched</h4>
-          <p>Launched our Healthcare AI practice, delivering medical imaging and clinical decision support systems to leading hospitals.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2023 — Gen AI Practice</div>
-          <h4>Generative AI Centre of Excellence</h4>
-          <p>Built our Gen AI practice — RAG systems, AI copilots and LLM deployments across finance and e-commerce clients.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2024 — Agentic AI Pioneer</div>
-          <h4>First Agentic AI Deployments</h4>
-          <p>Became one of India's first companies to deploy autonomous multi-agent AI systems in live enterprise environments.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2025 — Present</div>
-          <h4>150+ Projects &amp; Growing</h4>
-          <p>Now serving 80+ clients across 4 industries with a team of AI researchers, engineers and domain experts.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="section" style="background:var(--bg-secondary);">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">The Team</p>
-      <h2 class="section-title">Meet Our AI Leadership</h2>
-      <p class="section-sub">A multidisciplinary team of researchers, engineers and business strategists united by a passion for applied AI.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card reveal d-1">
-        <div class="team-avatar">AK</div>
-        <h4>Arjun Kumar</h4>
-        <div class="team-role">Chief Executive Officer</div>
-        <p style="color:var(--text-secondary);font-size:.85rem;margin-top:.75rem;line-height:1.7;">15 years in AI/ML. Former research lead at IIT. Driving AIML Labs' vision and strategic growth.</p>
-      </div>
-      <div class="team-card reveal d-2">
-        <div class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--purple));">PS</div>
-        <h4>Priya Sharma</h4>
-        <div class="team-role">Chief Technology Officer</div>
-        <p style="color:var(--text-secondary);font-size:.85rem;margin-top:.75rem;line-height:1.7;">PhD in Deep Learning. Architected 50+ production ML systems. Expert in LLMs and Agentic AI.</p>
-      </div>
-      <div class="team-card reveal d-3">
-        <div class="team-avatar" style="background:var(--grad-orange);">RV</div>
-        <h4>Rahul Verma</h4>
-        <div class="team-role">Head of Data Science</div>
-        <p style="color:var(--text-secondary);font-size:.85rem;margin-top:.75rem;line-height:1.7;">10+ years in quantitative modelling. Specialises in financial AI and healthcare predictive analytics.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section class="section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <p class="eyebrow">Technology</p>
-      <h2 class="section-title">Built on the Best AI Stack</h2>
-      <p class="section-sub">We use the most powerful, battle-tested AI frameworks and cloud platforms to build enterprise-grade solutions.</p>
-    </div>
-    <div class="tech-stack-grid">
-      <div class="tech-card reveal d-1"><div class="tech-icon">🐍</div><div class="tech-name">Python</div></div>
-      <div class="tech-card reveal d-2"><div class="tech-icon">🔥</div><div class="tech-name">PyTorch</div></div>
-      <div class="tech-card reveal d-3"><div class="tech-icon">🤖</div><div class="tech-name">TensorFlow</div></div>
-      <div class="tech-card reveal d-4"><div class="tech-icon">🦜</div><div class="tech-name">LangChain</div></div>
-      <div class="tech-card reveal d-1"><div class="tech-icon">🧠</div><div class="tech-name">OpenAI / GPT-4</div></div>
-      <div class="tech-card reveal d-2"><div class="tech-icon">☁️</div><div class="tech-name">AWS / Azure</div></div>
-      <div class="tech-card reveal d-3"><div class="tech-icon">🌩️</div><div class="tech-name">Google Cloud</div></div>
-      <div class="tech-card reveal d-4"><div class="tech-icon">🔬</div><div class="tech-name">MLflow / Kubeflow</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-inner reveal">
-      <p class="eyebrow" style="justify-content:center;">Join the AI Revolution</p>
-      <h2>Partner with <span class="gradient-text">AIML Labs</span></h2>
-      <p>Whether you're starting your first AI project or scaling to full autonomous operations — we're the partner you need.</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-        <a href="services.html" class="btn btn-ghost">Explore Services</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo"><img src="assets/logo.png" alt="AIML Labs Pvt Ltd"/></div>
-        <p>AIML Labs Pvt Ltd — Machine Learning, AI, Generative AI and Agentic AI for enterprises.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a>
-          <a href="#" class="social-btn">⌥</a><a href="#" class="social-btn">▶</a>
-        </div>
-      </div>
-      <div><p class="footer-col-title">Company</p><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div></div>
-      <div><p class="footer-col-title">Services</p><div class="footer-links"><a href="services.html#ml">Machine Learning</a><a href="services.html#ai">Artificial Intelligence</a><a href="services.html#genai">Generative AI</a><a href="services.html#agentic">Agentic AI</a></div></div>
-      <div><p class="footer-col-title">Industries</p><div class="footer-links"><a href="industries.html#banking">Banking</a><a href="industries.html#finance">Finance</a><a href="industries.html#healthcare">Health Care</a><a href="industries.html#ecommerce">E-Commerce</a></div></div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 AIML Labs Pvt Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
-    </div>
-  </div>
-</footer>
-<script src="assets/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
