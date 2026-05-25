@@ -340,6 +340,15 @@ a {
     z-index: 2;
 }
 
+.robot-blink {
+    animation: robot-eye-blink 4s infinite;
+}
+
+@keyframes robot-eye-blink {
+    0%, 94%, 98%, 100% { filter: brightness(1); }
+    96% { filter: brightness(0.1); }
+}
+
 .glow-orb {
     position: absolute;
     width: 300px;
