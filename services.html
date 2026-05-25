@@ -1,185 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | AIML LABS</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/png" href="public/logo.png"/>
-
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - AIML Labs Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
-  <div class="preloader"><div class="preloader-text">INITIALIZING AIML</div></div>
-  <canvas id="webgl-canvas"></canvas>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="brand-group">
-      <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
-      <span class="brand-name">AIML LABS</span>
-    </a>
-    <div style="display: flex; align-items: center; gap: 3vw;">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="industries.html">Industries</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
-        <span class="theme-label">THEME</span>
-        <!-- Sun Icon (default in dark mode) -->
-        <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <!-- Moon Icon -->
-        <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- SECTION 1: HERO CAPABILITIES -->
-  <section class="section container" id="services-hero" style="padding-top: 25vh; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">SYSTEM</span></div></h1>
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">CAPABILITIES</div></h1>
-  </section>
-
-  <!-- SECTION 2: MACHINE LEARNING -->
-  <section class="section container" id="services-ml" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="glass-panel" style="width: 100%; border-left: 4px solid var(--accent-cyan); display: flex; flex-direction: column; gap: 3vh;">
-      <div>
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">[ CAPABILITY_01 ]</span>
-        <h2 class="display-large" style="color: var(--accent-cyan); margin-top: 1vh;">MACHINE LEARNING</h2>
-        <h3 class="display-med" style="margin-top: 1vh; color: white;">High-Velocity Predictive Topology</h3>
-      </div>
-      <p class="text-body" style="font-size: 1.1rem; color: #eee;">
-        We build customized deep neural networks that ingest, process, and analyze petabytes of multi-modal, unstructured data in real-time, executing deterministic risk-matrix evaluations.
-      </p>
-      <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Predictive Modelling</h4>
-          <p class="text-body" style="font-size: 0.9rem;">High-dimensional regression and clustering algorithms mapping future operational trends.</p>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand">
+                <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img float-icon" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                <span class="brand-text">AIML Labs Pvt Ltd</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
+            </div>
         </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Neural Anomaly Signals</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Ultra-fast signal checking returning instantaneous defect and fraud alert alerts.</p>
-        </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Dynamic Risk Scoring</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Dynamic assessment pipelines optimizing liquidity and credit metrics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- SECTION 3: GENERATIVE AI -->
-  <section class="section container" id="services-gen" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="glass-panel" style="width: 100%; border-left: 4px solid var(--accent-purple); display: flex; flex-direction: column; gap: 3vh;">
-      <div>
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); font-weight: 700;">[ CAPABILITY_02 ]</span>
-        <h2 class="display-large" style="color: var(--accent-purple); margin-top: 1vh;">GENERATIVE AI</h2>
-        <h3 class="display-med" style="margin-top: 1vh; color: white;">Domain-Grounded Language Synthesis</h3>
-      </div>
-      <p class="text-body" style="font-size: 1.1rem; color: #eee;">
-        Our lab constructs fine-tuned, secure foundational models anchored strictly in your operational data using advanced retrieval-augmented generation architectures.
-      </p>
-      <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Multi-Vector RAG</h4>
-          <p class="text-body" style="font-size: 0.9rem;">State-of-the-art vector embedding storage returning context-perfect facts without hallucinations.</p>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title">Our <span class="primary-text">Services</span></h1>
+            <p class="hero-subtitle">Discover how our specialized Gen AI and Data Science integrations can optimize your workflow.</p>
         </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Secure Fine-Tuning</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Adapting pre-trained weights to secure infrastructure without exposing proprietary data weights.</p>
-        </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Prompt-Shield Logic</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Active input-output validation layers neutralizing prompt injection and extraction vectors.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 4: AUTONOMOUS AGENTS -->
-  <section class="section container" id="services-agent" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="glass-panel" style="width: 100%; border-left: 4px solid var(--accent-orange); display: flex; flex-direction: column; gap: 3vh;">
-      <div>
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); font-weight: 700;">[ CAPABILITY_03 ]</span>
-        <h2 class="display-large" style="color: var(--accent-orange); margin-top: 1vh;">AUTONOMOUS AGENTS</h2>
-        <h3 class="display-med" style="margin-top: 1vh; color: white;">Multi-Agent Task Orchestration</h3>
-      </div>
-      <p class="text-body" style="font-size: 1.1rem; color: #eee;">
-        We build agent networks that reason, orchestrate actions, execute custom APIs, and securely self-correct in complex workflow loops.
-      </p>
-      <div style="border-top: 1px solid var(--glass-border); padding-top: 3vh; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3vh;">
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Self-Refining Loops</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Agents test their output, analyze execution logs, and iterate until the mathematical objective is satisfied.</p>
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card hover-lift">
+                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>Build scalable predictive models that continuously learn and adapt to changing data environments. Our ML solutions range from simple linear regressions to complex deep neural networks.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card hover-lift">
+                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-database"></i></div>
+                    <h3>Data Science</h3>
+                    <p>Advanced analytics and data processing to transform your raw data into actionable intelligence. We extract value from messy, unstructured data sources across the enterprise.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card hover-lift">
+                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Gen AI</h3>
+                    <p>Leverage generative models for automated content creation, software engineering, and complex problem solving. We deploy cutting edge LLMs securely on your infrastructure.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card hover-lift">
+                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Agentic AI</h3>
+                    <p>Autonomous AI agents that can reason, plan, and execute multi-step workflows seamlessly. Watch your productivity multiply as autonomous entities resolve complex end-to-end tasks.</p>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Graph Consensus Protocol</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Coordinating multi-agent networks to agree on execution outcomes before writing changes.</p>
-        </div>
-        <div>
-          <h4 style="font-size: 1.1rem; color: white; margin-bottom: 1vh;">Tool Binding Systems</h4>
-          <p class="text-body" style="font-size: 0.9rem;">Safely binding database, shell, and web API hooks directly into dynamic reasoning engines.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 5: COMPILATION PIPELINE -->
-  <section class="section container" id="services-pipeline" style="min-height: 90vh; display: flex; align-items: center; margin-bottom: 10vh;">
-    <div class="grid-2" style="width:100%; align-items: center;">
-      <div>
-        <h2 class="display-large" style="margin-bottom: 4vh; overflow: hidden;">
-          <div class="split-line">THE EDGE</div>
-          <div class="split-line"><span class="gradient-text">COMPILER</span></div>
-        </h2>
-        <p class="text-body" style="margin-bottom: 3vh;">
-          Models are compiled directly to bare-metal architectures using advanced quantization matrices. We squeeze peak performances out of standard systems, returning massive computational efficiencies.
-        </p>
-        <p class="text-body">
-          Every vector calculation is pipeline-checked to secure processing flow speeds and ensure Zero-Trust runtime validations.
-        </p>
-      </div>
-      <div>
-        <div class="glass-panel" style="border-top: 4px solid var(--accent-cyan); display:flex; flex-direction:column; gap: 3vh;">
-          <span style="font-family: monospace; font-size: 0.85rem; color: var(--accent-cyan);">[ EDGE_COMPILER_STATES ]</span>
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--glass-border); padding-bottom:1.5vh;">
-            <span>STAGE 01 / QUANTIZE</span>
-            <span style="font-family:monospace; color: var(--accent-cyan);">FP16 -> INT8</span>
-          </div>
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--glass-border); padding-bottom:1.5vh;">
-            <span>STAGE 02 / BIND SHIELDS</span>
-            <span style="font-family:monospace; color: var(--accent-purple);">ACTIVE</span>
-          </div>
-          <div style="display:flex; justify-content:space-between;">
-            <span>STAGE 03 / EXECUTABLE DEPLOY</span>
-            <span style="font-family:monospace; color: var(--accent-orange);">TRUE_COMPILE</span>
-          </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                        <span class="brand-text">AIML Labs Pvt Ltd</span>
+                    </div>
+                    <p class="mt-2 text-gray">Innovating the future, one node at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="industries.html">Industries</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIML Labs Pvt Ltd. All rights reserved.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <h2 class="footer-large-text">AIML LABS</h2>
-      <div class="footer-bottom">
-        <div>© 2026 AIML LABS PVT LTD</div>
-        <div style="display:flex; gap: 2vw;"><a href="#">Privacy</a><a href="#">Terms</a></div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    </footer>
 </body>
 </html>

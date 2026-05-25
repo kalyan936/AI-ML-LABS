@@ -1,181 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Industries | AIML LABS</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/png" href="public/logo.png"/>
-
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries - AIML Labs Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
-  <div class="preloader"><div class="preloader-text">INITIALIZING AIML</div></div>
-  <canvas id="webgl-canvas"></canvas>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="brand-group">
-      <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
-      <span class="brand-name">AIML LABS</span>
-    </a>
-    <div style="display: flex; align-items: center; gap: 3vw;">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="industries.html" class="active">Industries</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
-        <span class="theme-label">THEME</span>
-        <!-- Sun Icon (default in dark mode) -->
-        <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <!-- Moon Icon -->
-        <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- SECTION 1: HERO SECTORS -->
-  <section class="section container" id="industries-hero" style="padding-top: 25vh; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">SECTOR</span></div></h1>
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">DEGREES</div></h1>
-  </section>
-
-  <!-- SECTION 2: FINANCE & HEALTH -->
-  <section class="section container" id="industries-fh" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="grid-2" style="gap: 6vh; width: 100%;">
-      <!-- Finance -->
-      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); font-weight: 700;">[ DEPLOYMENT_SEC_01 ]</span>
-          <h2 class="display-med" style="color: var(--accent-purple); margin-top: 1vh;">FINANCE</h2>
-          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-cyan); margin-top: 0.5vh;">SYS_STATUS: ACTIVE // ERR_RATE: 0.0001%</p>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand">
+                <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img float-icon" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                <span class="brand-text">AIML Labs Pvt Ltd</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html" class="active">Industries</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
+            </div>
         </div>
-        <p class="text-body" style="color: #eee;">
-          We engineer algorithmic credit assessment, neural ledger verification, and deterministic anti-fraud scoring. Our pipelines process massive financial feeds in high-frequency trading contexts.
-        </p>
-        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
-          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
-          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
-            <li>• Multi-Factor Risk Assessment Engines</li>
-            <li>• Real-Time Ledger Arbitrage Auditing</li>
-            <li>• Predictive Liquidity Stress Models</li>
-          </ul>
-        </div>
-      </div>
+    </header>
 
-      <!-- Health -->
-      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">[ DEPLOYMENT_SEC_02 ]</span>
-          <h2 class="display-med" style="color: var(--accent-cyan); margin-top: 1vh;">HEALTHCARE</h2>
-          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-purple); margin-top: 0.5vh;">SYS_STATUS: ONLINE // PRECSN: 99.82%</p>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title">Our <span class="primary-text">Industries</span></h1>
+            <p class="hero-subtitle">We deploy transformative AI solutions across these high-impact sectors.</p>
         </div>
-        <p class="text-body" style="color: #eee;">
-          Deploying deep convolutional image segmentation, automated clinical symptom alert loops, and cellular-level anomalies detection systems operating directly at extreme edges.
-        </p>
-        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
-          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
-          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
-            <li>• Spatial Cellular Scan Analysis</li>
-            <li>• Real-Time Patient Diagnostic Scoring</li>
-            <li>• High-Throughput Bioinformatic Clusters</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 3: COMMERCE & DEFENSE -->
-  <section class="section container" id="industries-cd" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="grid-2" style="gap: 6vh; width: 100%;">
-      <!-- Commerce -->
-      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); font-weight: 700;">[ DEPLOYMENT_SEC_03 ]</span>
-          <h2 class="display-med" style="color: var(--accent-orange); margin-top: 1vh;">COMMERCE</h2>
-          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--accent-orange); margin-top: 0.5vh;">SYS_STATUS: BALANCED // EFFCY: +14.2X</p>
+    <section class="projects">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card hover-zoom" style="background-image: url('assets/project1.png');">
+                    <div class="project-overlay">
+                        <h3>Banking</h3>
+                        <p>Fraud detection, risk assessment, and autonomous trading agents.</p>
+                    </div>
+                </div>
+                <div class="project-card hover-zoom" style="background-image: linear-gradient(rgba(11,15,25,0.7), rgba(82,0,204,0.3)), url('assets/hero.png');">
+                    <div class="project-overlay">
+                        <h3>Healthcare</h3>
+                        <p>Predictive diagnostics, medical image analysis, and personalized treatment plans.</p>
+                    </div>
+                </div>
+                <div class="project-card hover-zoom" style="background-image: url('assets/project2.png');">
+                    <div class="project-overlay">
+                        <h3>Finance</h3>
+                        <p>Algorithmic portfolio management, market prediction, and NLP-based sentiment analysis.</p>
+                    </div>
+                </div>
+                <div class="project-card hover-zoom" style="background-image: linear-gradient(rgba(11,15,25,0.7), rgba(255,123,0,0.3)), url('assets/blog1.png');">
+                    <div class="project-overlay">
+                        <h3>E-Commerce</h3>
+                        <p>Dynamic pricing models, intelligent recommendation engines, and supply chain automation.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-body" style="color: #eee;">
-          Stochastic logistical route optimizations and automated multi-agent demand matching. We run pricing algorithms that dynamically calculate and recalibrate relative margins instantly.
-        </p>
-        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
-          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
-          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
-            <li>• Multi-Node Supply Distribution Graphs</li>
-            <li>• Real-Time Elastic Pricing Networks</li>
-            <li>• Automated Warehouse Agent Coordination</li>
-          </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                        <span class="brand-text">AIML Labs Pvt Ltd</span>
+                    </div>
+                    <p class="mt-2 text-gray">Innovating the future, one node at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="industries.html">Industries</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIML Labs Pvt Ltd. All rights reserved.</p>
+            </div>
         </div>
-      </div>
-
-      <!-- Defense -->
-      <div class="glass-panel" style="display:flex; flex-direction:column; gap: 3vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 0.9rem; color: var(--text); font-weight: 700;">[ DEPLOYMENT_SEC_04 ]</span>
-          <h2 class="display-med" style="color: var(--text); margin-top: 1vh;">DEFENSE</h2>
-          <p class="text-body" style="font-size: 0.85rem; font-family: monospace; color: var(--text-muted); margin-top: 0.5vh;">SYS_STATUS: GUARDED // LATENCY: &lt;1.2MS</p>
-        </div>
-        <p class="text-body" style="color: #eee;">
-          Zero-trust multi-agent network boundaries actively neutralizing spectral and structural cyber threats across strictly isolated and air-gapped secure tactical infrastructure.
-        </p>
-        <div style="border-top: 1px solid var(--glass-border); padding-top: 2vh;">
-          <h4 style="color: white; font-size: 1rem; margin-bottom: 1vh;">Key Implementations:</h4>
-          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap: 1vh; padding-left: 0;">
-            <li>• High-Velocity Threat Detection Arrays</li>
-            <li>• Air-Gapped Local Model Architectures</li>
-            <li>• Spectral Defense Network Topologies</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: IMPACT MATRIX -->
-  <section class="section container" id="industries-matrix" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; margin-bottom: 10vh;">
-    <div style="margin-bottom: 8vh;">
-      <h2 class="display-large" style="overflow:hidden;"><div class="split-line">DEPLOYMENT</div></h2>
-      <h2 class="display-large" style="overflow:hidden;"><div class="split-line"><span class="gradient-text">MATRIX LOGS</span></div></h2>
-    </div>
-    <div class="grid-3">
-      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-purple);">
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-purple); display:block; margin-bottom: 1vh;">[ TRANSACTION_SPEED ]</span>
-        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">220K/S</h2>
-        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Concurrent Arbitrage Operations</p>
-      </div>
-      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-cyan);">
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); display:block; margin-bottom: 1vh;">[ SCAN_DIAGNOSTICS ]</span>
-        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">&lt;40MS</h2>
-        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Cell Segmentation Speed</p>
-      </div>
-      <div class="glass-panel" style="border-bottom: 3px solid var(--accent-orange);">
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-orange); display:block; margin-bottom: 1vh;">[ EDGE_Quantization ]</span>
-        <h2 style="font-size: clamp(3rem, 5vw, 6rem); color: white; font-family: monospace;">92%</h2>
-        <p class="text-body" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Tactical Model Shrinkage Ratio</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <h2 class="footer-large-text">AIML LABS</h2>
-      <div class="footer-bottom">
-        <div>© 2026 AIML LABS PVT LTD</div>
-        <div style="display:flex; gap: 2vw;"><a href="#">Privacy</a><a href="#">Terms</a></div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    </footer>
 </body>
 </html>

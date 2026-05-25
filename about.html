@@ -1,171 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | AIML LABS</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/png" href="public/logo.png"/>
-
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AIML Labs Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
-  <div class="preloader"><div class="preloader-text">INITIALIZING AIML</div></div>
-  <canvas id="webgl-canvas"></canvas>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="brand-group">
-      <img src="public/logo.png" alt="AIML Labs Logo" class="nav-logo"/>
-      <span class="brand-name">AIML LABS</span>
-    </a>
-    <div style="display: flex; align-items: center; gap: 3vw;">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="services.html">Services</a>
-        <a href="industries.html">Industries</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
-        <span class="theme-label">THEME</span>
-        <!-- Sun Icon (default in dark mode) -->
-        <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <!-- Moon Icon -->
-        <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- SECTION 1: HERO -->
-  <section class="section container" id="about-hero" style="padding-top: 25vh; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line"><span class="gradient-text">ORIGIN</span></div></h1>
-    <h1 class="display-huge" style="overflow: hidden;"><div class="split-line">THESIS</div></h1>
-  </section>
-
-  <!-- SECTION 2: FOUNDATIONAL HISTORY -->
-  <section class="section container" id="about-origin" style="min-height: 90vh; display: flex; align-items: center;">
-    <div class="grid-2" style="align-items: center;">
-      <div style="overflow: hidden; padding-left: 3vw; padding-right: 2vw;">
-        <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan); display:block; margin-bottom: 2vh;">[ FOUNDING_2021 ]</span>
-        <p class="text-body split-line" style="font-size: clamp(1.4rem, 2vw, 1.8rem); color: var(--text); line-height: 1.6; margin-bottom: 4vh;">
-          Founded in <span style="color: var(--accent-cyan); font-weight: 700;">2021</span> in Bengaluru, AIML LABS was born from a fundamental thesis: academic neural intelligence must be translated into robust, deterministic systems for enterprise operation.
-        </p>
-        <p class="text-body" style="margin-bottom: 3vh;">
-          We saw that enterprise computing was bottlenecked by generic third-party API dependencies, fragile integrations, and high latency overheads. Our objective was to assemble a world-class deep-tech lab focused on compiling high-dimensional math down to direct, bare-metal efficiency.
-        </p>
-        <p class="text-body">
-          Today, we coordinate cognitive infrastructure for major banking, health technology, and defense grids worldwide, operating under zero-trust safety bounds and sub-millisecond lag thresholds.
-        </p>
-      </div>
-      <div>
-        <div class="glass-panel" style="border-right: 4px solid var(--accent-purple); height: 100%; display: flex; flex-direction: column; justify-content: center;">
-          <h2 class="display-large" style="color: var(--accent-purple); margin-bottom: 2vh;">5+ YRS</h2>
-          <p class="text-body" style="text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: white; margin-bottom: 1vh;">PIONEERING DEEP TECH</p>
-          <p class="text-body" style="font-size: 0.95rem;">Empowering mathematical automation systems with unmatched precision and speed since 2021.</p>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand">
+                <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img float-icon" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                <span class="brand-text">AIML Labs Pvt Ltd</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="industries.html">Industries</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- SECTION 3: CORE PILLARS -->
-  <section class="section container" id="about-pillars" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center;">
-    <h2 class="display-large" style="margin-bottom: 8vh;"><span class="gradient-text">CORE PILLARS</span></h2>
-    <div class="grid-3">
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-cyan); font-size: 1.4rem; margin-bottom: 2vh;">01 / MATHEMATICAL RIGOR</h3>
-        <p class="text-body" style="font-size: 0.95rem;">No heuristics or vague prompting. We ground our neural layers in proven mathematical topology, ensuring reproducible, deterministic behavior across all enterprise processes.</p>
-      </div>
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-purple); font-size: 1.4rem; margin-bottom: 2vh;">02 / LATENCY OPTIMIZED</h3>
-        <p class="text-body" style="font-size: 0.95rem;">We compile deep learning models down to optimized edge nodes. Minimizing computational overhead is our obsession, unlocking true real-time execution speeds.</p>
-      </div>
-      <div class="glass-panel">
-        <h3 class="display-med" style="color: var(--accent-orange); font-size: 1.4rem; margin-bottom: 2vh;">03 / AUTONOMOUS LOGIC</h3>
-        <p class="text-body" style="font-size: 0.95rem;">Our systems reason, map out operational sequences, verify their own code paths, and self-correct instantly—eliminating operational bottlenecks.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: EVOLUTION TIMELINE -->
-  <section class="section container" id="about-timeline" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center;">
-    <h2 class="display-large" style="margin-bottom: 8vh;">SYSTEM <span class="gradient-text">EVOLUTION</span></h2>
-    <div style="display: flex; flex-direction: column; gap: 4vh;">
-      <div class="glass-panel" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 1.1rem; color: var(--accent-cyan); font-weight: 700;">2021</span>
-          <h3 class="display-med" style="font-size: 1.3rem; margin-top: 1vh; color: white;">ESTABLISHMENT NODE</h3>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title">About <span class="primary-text">Us</span></h1>
+            <p class="hero-subtitle">Pioneering the future of technology with advanced AI architectures.</p>
         </div>
-        <p class="text-body" style="max-width: 600px; font-size: 1rem;">AIML LABS is founded in Bengaluru. Initiated fundamental research on micro-inference engines and low-level matrix math calculations on custom edge chips.</p>
-      </div>
+    </section>
 
-      <div class="glass-panel" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 1.1rem; color: var(--accent-purple); font-weight: 700;">2023</span>
-          <h3 class="display-med" style="font-size: 1.3rem; margin-top: 1vh; color: white;">COGNITIVE ENGINE V1.0</h3>
+    <section class="value-prop">
+        <div class="container vp-container">
+            <div class="vp-left slide-up">
+                <h2 class="section-title">Transform Your Business With <span class="secondary-text">AI Technology</span></h2>
+            </div>
+            <div class="vp-right slide-up delay-1">
+                <p>At AIML Labs Pvt Ltd, we leverage the power of Machine Learning and Agentic AI to automate processes, generate deep insights, and unlock entirely new business models. Our cutting-edge solutions empower you to thrive in a rapidly evolving digital landscape.</p>
+                <p>Founded on the principles of innovation and excellence, our team of AI specialists, data scientists, and engineers work tirelessly to bring Gen AI to the forefront of the industry.</p>
+            </div>
         </div>
-        <p class="text-body" style="max-width: 600px; font-size: 1rem;">Deployed our first multi-agent orchestration grid across major finance pipelines in Asia, reducing decision latencies to less than 15ms.</p>
-      </div>
+    </section>
 
-      <div class="glass-panel" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2vh;">
-        <div>
-          <span style="font-family: monospace; font-size: 1.1rem; color: var(--accent-orange); font-weight: 700;">2025</span>
-          <h3 class="display-med" style="font-size: 1.3rem; margin-top: 1vh; color: white;">PETABYTE SCALE TRAINER</h3>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                        <span class="brand-text">AIML Labs Pvt Ltd</span>
+                    </div>
+                    <p class="mt-2 text-gray">Innovating the future, one node at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="industries.html">Industries</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIML Labs Pvt Ltd. All rights reserved.</p>
+            </div>
         </div>
-        <p class="text-body" style="max-width: 600px; font-size: 1rem;">Released proprietary reinforcement learning pipelines. Models dynamically self-correct weight representations, allowing autonomous edge adaptation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: ACTIVE RESEARCH CORE -->
-  <section class="section container" id="about-research" style="min-height: 90vh; display: flex; align-items: center; margin-bottom: 10vh;">
-    <div class="grid-2">
-      <div style="display: flex; flex-direction: column; justify-content: center; padding-left: 3vw; padding-right: 2vw;">
-        <h2 class="display-large" style="margin-bottom: 4vh; overflow: hidden;">
-          <div class="split-line">ACTIVE R&amp;D</div>
-          <div class="split-line"><span class="gradient-text">FRONTIERS</span></div>
-        </h2>
-        <p class="text-body" style="margin-bottom: 3vh;">
-          Our lab operates on the leading edge of quantum-neural integration. We are presently developing bio-computation protocols that map synaptic weight changes onto synthetic, silicon hardware structures.
-        </p>
-        <p class="text-body">
-          We ensure strict security bounds on all local models using physical cryptographic container blocks, completely eliminating the risk of data leakage or prompt contamination.
-        </p>
-      </div>
-      <div>
-        <div class="glass-panel" style="border-top: 4px solid var(--accent-cyan); display:flex; flex-direction:column; gap: 3vh;">
-          <span style="font-family: monospace; font-size: 0.9rem; color: var(--accent-cyan);">[ R&amp;D_METADATA ]</span>
-          <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 2vh;">
-            <h4 style="color: white; margin-bottom: 1vh;">QUANTUM SYNAPSE</h4>
-            <p class="text-body" style="font-size: 0.9rem;">Mapping multi-dimensional tensor metrics to sparse, ultra-fast computational matrices.</p>
-          </div>
-          <div>
-            <h4 style="color: white; margin-bottom: 1vh;">CRYPTO-CONTAINER</h4>
-            <p class="text-body" style="font-size: 0.9rem;">Physical isolation models isolating active weights during edge inference execution.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <h2 class="footer-large-text">AIML LABS</h2>
-      <div class="footer-bottom">
-        <div>© 2026 AIML LABS PVT LTD</div>
-        <div style="display:flex; gap: 2vw;"><a href="#">Privacy</a><a href="#">Terms</a></div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    </footer>
 </body>
 </html>
