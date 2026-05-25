@@ -6,41 +6,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ========== 1. NATURAL EYE BLINK ==========
-    const eyelidLeft  = document.getElementById('eyelidLeft');
-    const eyelidRight = document.getElementById('eyelidRight');
+    // ========== 1. WATERMARK CURSOR GLOW ==========
+    const robotWrapper = document.getElementById('robotWrapper');
+    const watermarkGlow = document.getElementById('watermarkGlow');
 
-    if (eyelidLeft && eyelidRight) {
-        function blink() {
-            // Natural close: fast
-            eyelidLeft.style.transition  = 'transform 0.12s ease-in';
-            eyelidRight.style.transition = 'transform 0.12s ease-in';
-            eyelidLeft.style.transform   = 'scaleY(1)';
-            eyelidRight.style.transform  = 'scaleY(1)';
-
-            // Natural open: slightly slower
-            setTimeout(() => {
-                eyelidLeft.style.transition  = 'transform 0.18s ease-out';
-                eyelidRight.style.transition = 'transform 0.18s ease-out';
-                eyelidLeft.style.transform   = 'scaleY(0)';
-                eyelidRight.style.transform  = 'scaleY(0)';
-            }, 130);
-
-            // Schedule next blink — natural human intervals (2-6s) with occasional double-blink
-            const nextDelay = 2000 + Math.random() * 4000;
-            setTimeout(() => {
-                // 20% chance of a quick double blink
-                if (Math.random() < 0.2) {
-                    blink();
-                    setTimeout(blink, 350);
-                } else {
-                    blink();
-                }
-            }, nextDelay);
-        }
-
-        // Start blinking after initial load
-        setTimeout(blink, 1500);
+    if (robotWrapper && watermarkGlow) {
+        robotWrapper.addEventListener('mousemove', (e) => {
+            // Get coordinates relative to the wrapper
+            const rect = robotWrapper.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Move the glow to follow the cursor exactly
+            watermarkGlow.style.left = `${x}px`;
+            watermarkGlow.style.top = `${y}px`;
+        });
+        
+        // Reset the glow position when mouse leaves the image area
+        robotWrapper.addEventListener('mouseleave', () => {
+            watermarkGlow.style.left = '50%';
+            watermarkGlow.style.top = '50%';
+        });
     }
 
     // ========== 2. PARTICLE BACKGROUND ==========
