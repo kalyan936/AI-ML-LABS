@@ -340,13 +340,32 @@ a {
     z-index: 2;
 }
 
-.robot-blink {
-    animation: robot-eye-blink 4s infinite;
+.eye {
+    position: absolute;
+    width: 15%;
+    height: 10%;
+    background: #0B0F19;
+    z-index: 3;
+    animation: eye-blink 4s infinite;
+    transform-origin: top;
+    transform: scaleY(0);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
-@keyframes robot-eye-blink {
-    0%, 94%, 98%, 100% { filter: brightness(1); }
-    96% { filter: brightness(0.1); }
+.left-eye {
+    top: 38%;
+    left: 28%;
+}
+
+.right-eye {
+    top: 38%;
+    right: 28%;
+}
+
+@keyframes eye-blink {
+    0%, 92%, 98%, 100% { transform: scaleY(0); }
+    95% { transform: scaleY(1); }
 }
 
 .glow-orb {
