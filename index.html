@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIML Labs  AI </title>
-    <meta name="description" content="Empowering the future with Machine Learning, Gen AI, and Agentic AI.">
-    <!-- Google Fonts -->
+    <title>AIML Labs - AI & Machine Learning Solutions</title>
+    <meta name="description" content="AIML Labs — Empowering the future with Machine Learning, Gen AI, and Agentic AI solutions for global enterprises.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Section 1: Navigation Header -->
+
+    <!-- === NAVBAR === -->
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand">
-                <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img float-icon" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
+                <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.style.display='none'">
                 <span class="brand-text">AIML Labs</span>
             </div>
             <nav class="nav-links">
@@ -29,143 +28,178 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
-                <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Section 2: Hero Layout -->
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-left fade-in-left">
-                <h1 class="hero-title">Empowering The Future With <span class="primary-text glitch" data-text="Gen AI & Agentic AI">Gen AI & Agentic AI</span></h1>
-                <p class="hero-subtitle">AIML Labs Pvt Ltd specializes in developing cutting-edge AI technology, transforming processes for a wide range of global industries.</p>
-                <div class="hero-actions">
-                    <a href="services.html" class="btn btn-primary glow-effect">Explore Now</a>
-
-                </div>
-
-            </div>
-            <div class="hero-right">
-                <img src="assets/hero.png" alt="AI Robot Face" class="hero-image">
-                <div class="eye left-eye"></div>
-                <div class="eye right-eye"></div>
-                <div class="glow-orb"></div>
+    <!-- === HERO WITH ROBOT BACKGROUND === -->
+    <section class="hero" id="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-bg-robot">
+            <img src="assets/hero.png" alt="AI Robot" class="hero-bg-img" id="robotImg">
+            <!-- Eyelid overlays for natural blink -->
+            <div class="eyelid eyelid-left" id="eyelidLeft"></div>
+            <div class="eyelid eyelid-right" id="eyelidRight"></div>
+            <!-- Glow pulse behind eyes -->
+            <div class="eye-glow eye-glow-left"></div>
+            <div class="eye-glow eye-glow-right"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-scanline"></div>
+        <div class="container hero-content">
+            <div class="hero-eyebrow reveal"><span class="dot"></span> AI-Powered Innovation</div>
+            <h1 class="hero-title reveal delay-1">
+                Empowering<br>The Future With<br>
+                <span class="line2" id="typed-text"></span><span class="typed-cursor">|</span>
+            </h1>
+            <p class="hero-subtitle reveal delay-2">AIML Labs specialises in developing cutting-edge AI technology, transforming processes for a wide range of global industries.</p>
+            <div class="hero-actions reveal delay-3">
+                <a href="services.html" class="btn btn-primary btn-large">Explore Now</a>
+                <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Split Value Proposition (About Snippet) -->
+    <!-- === SECTION 2: VALUE PROP === -->
     <section class="value-prop">
         <div class="container vp-container">
-            <div class="vp-left slide-up">
+            <div class="vp-left reveal-left">
+                <span class="section-badge">Who We Are</span>
                 <h2 class="section-title">Transform Your Business With <span class="secondary-text">AI Technology</span></h2>
             </div>
-            <div class="vp-right slide-up delay-1">
+            <div class="vp-right reveal-right">
                 <p>Leverage the power of Machine Learning and Agentic AI to automate processes, generate deep insights, and unlock entirely new business models. Our cutting-edge solutions empower you to thrive in a rapidly evolving digital landscape.</p>
-                <a href="about.html" class="btn btn-outline glow-outline">Learn More</a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="200">0</span><span class="stat-number" style="font-size:1.4rem;">+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="50">0</span><span class="stat-number" style="font-size:1.4rem;">+</span>
+                        <span class="stat-label">Global Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="98">0</span><span class="stat-number" style="font-size:1.4rem;">%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Core Services Grid Snippet -->
+    <!-- === SECTION 3: SERVICES GRID === -->
     <section class="services">
         <div class="container">
             <div class="section-header">
                 <div class="sh-left">
+                    <span class="section-badge">What We Do</span>
                     <h2 class="section-title">Explore Best AI Services</h2>
-                    <p>Discover how our specialized Gen AI and Data Science integrations can optimize your workflow.</p>
+                    <p class="section-subtitle">Discover how our specialised Gen AI and Data Science integrations can optimise your workflow.</p>
                 </div>
                 <div class="sh-right">
-                    <a href="services.html" class="btn btn-outline glow-outline">All Services</a>
+                    <a href="services.html" class="btn btn-outline">All Services</a>
                 </div>
             </div>
             <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="service-card hover-lift">
-                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-brain"></i></div>
+                <div class="service-card reveal delay-1">
+                    <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
                     <h3>Machine Learning</h3>
                     <p>Build scalable predictive models that continuously learn and adapt to changing data environments.</p>
-                    <a href="services.html" class="read-more">Read More &rarr;</a>
+                    <a href="services.html" class="read-more">Read More</a>
                 </div>
-                <!-- Card 2 -->
-                <div class="service-card hover-lift">
-                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-database"></i></div>
+                <div class="service-card reveal delay-2">
+                    <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
                     <h3>Data Science</h3>
                     <p>Advanced analytics and data processing to transform your raw data into actionable intelligence.</p>
-                    <a href="services.html" class="read-more">Read More &rarr;</a>
+                    <a href="services.html" class="read-more">Read More</a>
                 </div>
-                <!-- Card 3 -->
-                <div class="service-card hover-lift">
-                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-network-wired"></i></div>
+                <div class="service-card reveal delay-3">
+                    <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
                     <h3>Gen AI</h3>
                     <p>Leverage generative models for automated content creation, design, and complex problem solving.</p>
-                    <a href="services.html" class="read-more">Read More &rarr;</a>
+                    <a href="services.html" class="read-more">Read More</a>
                 </div>
-                <!-- Card 4 -->
-                <div class="service-card hover-lift">
-                    <div class="icon-wrapper spin-hover"><i class="fa-solid fa-robot"></i></div>
+                <div class="service-card reveal delay-4">
+                    <div class="icon-wrapper"><i class="fa-solid fa-robot"></i></div>
                     <h3>Agentic AI</h3>
                     <p>Autonomous AI agents that can reason, plan, and execute multi-step workflows seamlessly.</p>
-                    <a href="services.html" class="read-more">Read More &rarr;</a>
+                    <a href="services.html" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 5: Completed Projects Showcase (Industries Snippet) -->
+    <!-- === SECTION 4: INDUSTRIES SHOWCASE === -->
     <section class="projects">
         <div class="container">
-            <div class="section-header center">
+            <div class="section-header center" style="display:block; text-align:center; margin-bottom:60px;">
+                <span class="section-badge">Our Expertise</span>
                 <h2 class="section-title">Take A Look At Our Core Industries</h2>
-                <p>We've deployed transformative AI solutions across these high-impact sectors.</p>
+                <p class="section-subtitle" style="margin:0 auto;">We deploy transformative AI solutions across these high-impact sectors.</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card hover-zoom" style="background-image: url('assets/project1.png');">
+                <div class="project-card reveal" style="background-image: url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=900&q=80');">
                     <div class="project-overlay">
-                        <h3>Banking & Finance</h3>
-                        <a href="industries.html" class="btn-link">View Details &rarr;</a>
+                        <h3>Banking</h3>
+                        <a href="industries.html" class="btn-link">View Details →</a>
                     </div>
                 </div>
-                <div class="project-card hover-zoom" style="background-image: url('assets/project2.png');">
+                <div class="project-card reveal delay-1" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&q=80');">
                     <div class="project-overlay">
-                        <h3>Healthcare & E-commerce</h3>
-                        <a href="industries.html" class="btn-link">View Details &rarr;</a>
+                        <h3>Healthcare</h3>
+                        <a href="industries.html" class="btn-link">View Details →</a>
+                    </div>
+                </div>
+                <div class="project-card reveal delay-2" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&q=80');">
+                    <div class="project-overlay">
+                        <h3>Finance</h3>
+                        <a href="industries.html" class="btn-link">View Details →</a>
+                    </div>
+                </div>
+                <div class="project-card reveal delay-3" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80');">
+                    <div class="project-overlay">
+                        <h3>E-Commerce</h3>
+                        <a href="industries.html" class="btn-link">View Details →</a>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="industries.html" class="btn btn-primary glow-effect">View All Industries</a>
+            <div class="text-center mt-5 reveal">
+                <a href="industries.html" class="btn btn-primary">View All Industries</a>
             </div>
         </div>
     </section>
 
-    <!-- Section 6: Testimonials & Social Proof -->
+    <!-- === SECTION 5: TESTIMONIALS === -->
     <section class="testimonials">
         <div class="container test-container">
-            <div class="test-left">
+            <div class="test-left reveal-left">
+                <span class="section-badge">Social Proof</span>
                 <h2 class="section-title">What People Say About Our AI Service</h2>
-                <p>Read inspiring stories from our clients who revolutionized their workflows using AIML Labs Pvt Ltd.</p>
+                <p style="color:var(--text-light); margin-top:16px;">Read inspiring stories from our clients who revolutionised their workflows using AIML Labs.</p>
             </div>
             <div class="test-right">
                 <div class="testimonial-grid">
-                    <div class="test-card float-anim delay-1">
-                        <p class="review">"The Agentic AI solutions deployed by AIML Labs dramatically reduced our manual operations."</p>
+                    <div class="test-card reveal delay-1">
+                        <div class="stars">★★★★★</div>
+                        <p class="review">"The Agentic AI solutions deployed by AIML Labs dramatically reduced our manual operations and saved us millions."</p>
                         <div class="user-info">
-                            <img src="assets/avatar1.png" alt="Eline Claes" class="avatar" onerror="this.src='https://via.placeholder.com/50x50/5200cc/ffffff?text=E'">
+                            <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
                             <div>
                                 <h4>Eline Claes</h4>
                                 <span>Banking Executive</span>
                             </div>
                         </div>
                     </div>
-                    <div class="test-card float-anim delay-2">
-                        <p class="review">"Incredible Gen AI algorithms that transformed our e-commerce platform instantly."</p>
+                    <div class="test-card reveal delay-2">
+                        <div class="stars">★★★★★</div>
+                        <p class="review">"Incredible Gen AI algorithms that transformed our e-commerce platform and boosted conversions by 340%."</p>
                         <div class="user-info">
                             <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
                             <div>
                                 <h4>Alexander Engel</h4>
-                                <span>Project Manager</span>
+                                <span>CTO, TechRetail Inc.</span>
                             </div>
                         </div>
                     </div>
@@ -174,25 +208,57 @@
         </div>
     </section>
 
-    <!-- Section 7: Final Call To Action (CTA) Banner -->
-    <section class="cta-banner">
-        <div class="container cta-container glow-box">
-            <h1 class="cta-title">Unlock The Potential Of AI With <span class="secondary-text">AIML Labs</span></h1>
-            <p class="cta-subtitle">Join us in shaping the future. Our experts are ready to build the next generation of AI solutions for your enterprise.</p>
-            <a href="contact.html" class="btn btn-primary glow-effect btn-large">Contact Us</a>
+    <!-- === SECTION 6: WHY CHOOSE US === -->
+    <section class="why-us" style="padding: 100px 0;">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:64px;">
+                <span class="section-badge">Why AIML Labs</span>
+                <h2 class="section-title">Built Different. Built Better.</h2>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:32px;">
+                <div class="service-card reveal delay-1" style="text-align:center;">
+                    <div class="icon-wrapper" style="margin:0 auto 24px; background:rgba(255,123,0,0.1); border-color:rgba(255,123,0,0.2); color:var(--accent-secondary);"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Enterprise Security</h3>
+                    <p>SOC2 compliant infrastructure with end-to-end encryption for all AI deployments.</p>
+                </div>
+                <div class="service-card reveal delay-2" style="text-align:center;">
+                    <div class="icon-wrapper" style="margin:0 auto 24px;"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Lightning Fast</h3>
+                    <p>Sub-millisecond inference times powered by optimised model architectures.</p>
+                </div>
+                <div class="service-card reveal delay-3" style="text-align:center;">
+                    <div class="icon-wrapper" style="margin:0 auto 24px; background:rgba(255,123,0,0.1); border-color:rgba(255,123,0,0.2); color:var(--accent-secondary);"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <h3>Continuous Learning</h3>
+                    <p>Models that evolve with your data — always improving, never stagnant.</p>
+                </div>
+                <div class="service-card reveal delay-4" style="text-align:center;">
+                    <div class="icon-wrapper" style="margin:0 auto 24px;"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Dedicated Support</h3>
+                    <p>24/7 AI operations monitoring with dedicated account managers for every client.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Section 8: Multi-Column Footer -->
+    <!-- === SECTION 7: CTA BANNER === -->
+    <section class="cta-banner">
+        <div class="container cta-container glow-box reveal">
+            <h2 class="cta-title">Unlock The Potential Of AI With <span class="secondary-text">AIML Labs</span></h2>
+            <p class="cta-subtitle">Join us in shaping the future. Our experts are ready to build the next generation of AI solutions for your enterprise.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- === SECTION 8: FOOTER === -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="brand">
-                        <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.src='https://via.placeholder.com/40x40/5200cc/ffffff?text=A'">
-                        <span class="brand-text">AIML Labs Pvt Ltd</span>
+                        <img src="assets/logo.png" alt="AIML Labs Logo" class="brand-img" onerror="this.style.display='none'">
+                        <span class="brand-text">AIML Labs</span>
                     </div>
-                    <p class="mt-2 text-gray">Innovating the future, one node at a time.</p>
+                    <p>Innovating the future with Machine Learning, Gen AI, and Agentic AI solutions.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -203,24 +269,32 @@
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+                    <h4>Services</h4>
+                    <a href="services.html">Machine Learning</a>
+                    <a href="services.html">Data Science</a>
+                    <a href="services.html">Gen AI</a>
+                    <a href="services.html">Agentic AI</a>
                 </div>
                 <div class="footer-social">
-                    <h4>Follow Us</h4>
+                    <h4>Connect</h4>
                     <div class="social-icons">
-                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="social-icon hover-float"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div style="margin-top:24px; font-size:0.9rem;">
+                        <p><i class="fa-solid fa-envelope" style="color:var(--accent-secondary); margin-right:8px;"></i> <a href="mailto:hr@themllabs.com" style="color:var(--text-gray);">hr@themllabs.com</a></p>
+                        <p style="margin-top:8px;"><i class="fa-solid fa-envelope" style="color:var(--accent-secondary); margin-right:8px;"></i> <a href="mailto:bharath@themllabs.com" style="color:var(--text-gray);">bharath@themllabs.com</a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 AIML Labs Pvt Ltd. All rights reserved.</p>
+                <p>&copy; 2026 AIML Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
