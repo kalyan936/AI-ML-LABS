@@ -310,14 +310,14 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .hero-robot-image {
     /* Dimensions */
     width: 100%;
-    max-width: 680px;  /* Keeps the head proportionally sized on large screens */
+    max-width: 820px;  /* Keeps the head proportionally sized on large screens */
     height: auto;
     
     /* Positioning */
     position: absolute;
     bottom: 0;         /* Sits flush at the very bottom of the hero section */
     left: 50%;
-    transform: translateX(-50%); /* Centers the robot perfectly in the viewport */
+    transform: translateX(calc(-50% + 96px)); /* Centered and shifted 1 inch right */
     z-index: 1;        /* Sits behind the text grids but in front of the background */
     
     /* Display behavior */
