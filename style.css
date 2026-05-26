@@ -230,10 +230,10 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* ===================== HERO — SPLIT LAYOUT ===================== */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 75px);
     display: flex; align-items: center;
     position: relative; overflow: hidden;
-    padding: 40px 0;
+    padding: 20px 0;
     background: var(--bg-primary);
 }
 
