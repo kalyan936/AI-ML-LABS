@@ -37,35 +37,46 @@
     <section class="hero" id="hero">
         <canvas id="particle-canvas"></canvas>
         <div class="hero-scanline"></div>
-        <div class="container hero-split">
-            <!-- LEFT: Text Content -->
-            <div class="hero-left">
-                <div class="hero-eyebrow reveal"><span class="dot"></span> AI-Powered Innovation</div>
+        <div class="container hero-three-col">
+            <!-- LEFT COLUMN — Title & Stats -->
+            <div class="hero-col-left">
                 <h1 class="hero-title reveal delay-1">
-                    Empowering<br>The Future With<br>
-                    <span class="line2" id="typed-text"></span><span class="typed-cursor">|</span>
+                    Empowering<br>
+                    The Future With<br>
+                    <span class="cyan-text">AI & Robotics</span>
                 </h1>
-                <p class="hero-subtitle reveal delay-2">AIML Labs specialises in developing cutting-edge AI technology, transforming processes for a wide range of global industries.</p>
-                <div class="hero-actions reveal delay-3">
-                    <a href="services.html" class="btn btn-primary btn-large">Explore Now</a>
-                    <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
+                <div class="hero-left-actions reveal delay-2">
+                    <a href="services.html" class="btn btn-primary">Explore Now</a>
+                    <div class="hero-stat-tracker">
+                        <span class="stat-num-cyan">200 +</span>
+                        <span class="stat-lbl-gray">Trusted Companies</span>
+                    </div>
                 </div>
             </div>
-            <!-- RIGHT: Robot with cursor-following effect & floating HUD elements -->
-            <div class="hero-right" id="heroRight">
+
+            <!-- CENTER: Robot -->
+            <div class="hero-col-center" id="heroRight">
                 <div class="hero-ring"></div>
                 <div class="glow-orb"></div>
-                
-                <!-- HUD elements for the ML/AI effect -->
-                <div class="hud-element hud-top-left reveal"><span class="hud-glow-dot"></span><span class="hud-text">ML / DEEP_LEARNING</span></div>
-                <div class="hud-element hud-top-right reveal"><span class="hud-glow-dot"></span><span class="hud-text">GEN_AI / AGENTIC</span></div>
-                <div class="hud-element hud-bottom-left reveal"><span class="hud-glow-dot"></span><span class="hud-text">NLP / CHAT_BOTS</span></div>
-                <div class="hud-element hud-bottom-right reveal"><span class="hud-glow-dot"></span><span class="hud-text">INTEL_AUTOMATION</span></div>
-
                 <div class="robot-wrapper" id="robotWrapper">
                     <img src="assets/hero.png" alt="AI Robot" class="hero-robot-img" id="robotImg">
                     <div class="watermark-glow" id="watermarkGlow"></div>
                 </div>
+            </div>
+
+            <!-- RIGHT COLUMN — Play Button & Paragraph -->
+            <div class="hero-col-right">
+                <div class="watch-intro-container reveal delay-1">
+                    <a href="#" class="play-trigger">
+                        <span class="play-icon-circle">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                        <span class="play-text-label">Watch Intro</span>
+                    </a>
+                </div>
+                <p class="hero-right-description reveal delay-2">
+                    Our AI and robotics company specializes in the development of cutting-edge technology for a wide range of industries.
+                </p>
             </div>
         </div>
     </section>
@@ -218,7 +229,7 @@
     </section>
 
     <!-- === SECTION 6: WHY CHOOSE US === -->
-    <section class="why-us" style="padding: 100px 0;">
+    <section class="why-us">
         <div class="container">
             <div style="text-align:center; margin-bottom:64px;">
                 <span class="section-badge">Why AIML Labs</span>
