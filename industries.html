@@ -6,11 +6,16 @@
     <title>Industries - AIML Labs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=2.3">
 </head>
-<body>
+<body class="page-fade-in">
+    <script>
+        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.body.classList.add('light-theme');
+        }
+    </script>
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand">
@@ -25,6 +30,9 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
             </div>
         </div>

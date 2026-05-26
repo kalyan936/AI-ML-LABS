@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - AIML Labs</title>
+    <meta name="description" content="Technical authority, systems engineering, and cloud-native AI architectures. Learn more about AIML Labs' expertise.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=2.3">
 </head>
-<body>
+<body class="page-fade-in">
+    <script>
+        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <!-- === NAVBAR === -->
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand">
@@ -25,49 +33,660 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <a href="contact.html" class="btn btn-primary glow-effect">Get Started</a>
             </div>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 class="hero-title">About <span class="primary-text">Us</span></h1>
-            <p class="hero-subtitle">Pioneering the future of technology with advanced AI architectures.</p>
+    <!-- === 1. HERO SECTION === -->
+    <section class="about-hero">
+        <canvas id="about-hero-canvas"></canvas>
+        <div class="container" style="position: relative; z-index: 2; text-align: center;">
+            <span class="section-badge">Technical Authority</span>
+            <h1 class="hero-title" style="margin: 0 auto 24px; max-width: 900px;">Engineering Intelligent AI Systems for Modern Enterprises</h1>
+            <p class="hero-subtitle" style="margin: 0 auto 40px;">We specialize in GenAI, Agentic AI, and Data Engineering solutions designed for scalability, automation, and real-world business impact.</p>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="services.html" class="btn btn-primary btn-large">Explore Services</a>
+                <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
+            </div>
         </div>
     </section>
 
-    <section class="value-prop">
+    <!-- === 2. WHO WE ARE SECTION === -->
+    <section class="value-prop" style="background: var(--bg-secondary);">
         <div class="container vp-container">
-            <div class="vp-left slide-up">
-                <h2 class="section-title">Transform Your Business With <span class="secondary-text">AI Technology</span></h2>
+            <div class="vp-left reveal-left">
+                <span class="section-badge">Company Profile</span>
+                <h2 class="section-title">Architecting Enterprise AI Systems</h2>
             </div>
-            <div class="vp-right slide-up delay-1">
-                <p>At AIML Labs, we leverage the power of Machine Learning and Agentic AI to automate processes, generate deep insights, and unlock entirely new business models. Our cutting-edge solutions empower you to thrive in a rapidly evolving digital landscape.</p>
-                <p>Founded on the principles of innovation and excellence, our team of AI specialists, data scientists, and engineers work tirelessly to bring Gen AI to the forefront of the industry.</p>
+            <div class="vp-right reveal-right">
+                <p>AI-ML-LABS is an AI engineering and data solutions company focused on building scalable enterprise systems using Generative AI, Agentic AI, and cloud-native data architectures.</p>
+                <p>We eliminate motivational marketing fluff to focus entirely on robust systems design, automated workflow integrity, model optimization, and high-performance data pipelining. Our solutions enable Fortune 500 enterprises to leverage production-ready AI agent swarms and scalable streaming backends securely.</p>
             </div>
         </div>
     </section>
 
-    <section class="about-details" style="padding-bottom: 100px;">
+    <!-- === 3. CORE EXPERTISE SECTION === -->
+    <section class="why-us" style="background: var(--bg-primary);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                <div class="glow-box" style="background: var(--bg-secondary); padding: 40px; border-radius: 15px; border-top: 3px solid var(--accent-primary);">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-white);"><i class="fa-solid fa-eye" style="color: var(--accent-primary); margin-right: 10px;"></i>Our Vision</h3>
-                    <p>To be the global leader in providing next-generation autonomous AI systems that redefine the boundaries of what is possible in digital enterprise architecture.</p>
+            <div style="text-align: center; margin-bottom: 64px;">
+                <span class="section-badge">Engineering Focus</span>
+                <h2 class="section-title">Core Capabilities</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Our core competencies lie at the intersection of data orchestration, model alignment, and autonomous routing.</p>
+            </div>
+            <div class="expertise-grid">
+                <!-- Card 1 -->
+                <div class="expertise-card reveal delay-1">
+                    <div class="icon-wrapper" style="color: var(--accent-secondary);"><i class="fa-solid fa-server"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p>Building streaming architectures, unified lakehouses, and high-throughput pipelines designed to supply clean, real-time context to deep learning models.</p>
+                    <div class="expertise-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-pills">
+                            <span>Databricks</span>
+                            <span>Spark</span>
+                            <span>Kafka</span>
+                            <span>dbt</span>
+                            <span>Delta Lake</span>
+                        </div>
+                    </div>
+                    <div class="mini-diagram">
+                        <svg viewBox="0 0 240 60" width="100%" height="100%">
+                            <rect x="10" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="35" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Stream</text>
+                            
+                            <path d="M 60,32 L 85,32" stroke="var(--accent-secondary)" stroke-width="1.5" stroke-dasharray="3,3" />
+                            <polygon points="85,32 80,29 80,35" fill="var(--accent-secondary)" />
+                            
+                            <rect x="90" y="20" width="60" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--accent-primary)" />
+                            <text x="120" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Spark / dbt</text>
+                            
+                            <path d="M 150,32 L 175,32" stroke="var(--accent-secondary)" stroke-width="1.5" stroke-dasharray="3,3" />
+                            <polygon points="175,32 170,29 170,35" fill="var(--accent-secondary)" />
+                            
+                            <rect x="180" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="205" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Delta Lake</text>
+                        </svg>
+                    </div>
                 </div>
-                <div class="glow-box" style="background: var(--bg-secondary); padding: 40px; border-radius: 15px; border-top: 3px solid var(--accent-secondary);">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-white);"><i class="fa-solid fa-bullseye" style="color: var(--accent-secondary); margin-right: 10px;"></i>Our Mission</h3>
-                    <p>To empower businesses by abstracting complexity through Agentic and Generative AI, delivering unparalleled efficiency, accuracy, and strategic growth.</p>
+                <!-- Card 2 -->
+                <div class="expertise-card reveal delay-2">
+                    <div class="icon-wrapper" style="color: var(--accent-primary);"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Generative AI</h3>
+                    <p>Designing secure, context-aware LLM interfaces, modular Retrieval-Augmented Generation (RAG) indices, and VPC-restricted semantic search systems.</p>
+                    <div class="expertise-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-pills">
+                            <span>OpenAI</span>
+                            <span>LangChain</span>
+                            <span>LlamaIndex</span>
+                            <span>Qdrant</span>
+                            <span>HuggingFace</span>
+                        </div>
+                    </div>
+                    <div class="mini-diagram">
+                        <svg viewBox="0 0 240 60" width="100%" height="100%">
+                            <rect x="10" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="35" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">User Query</text>
+                            
+                            <path d="M 60,32 L 85,32" stroke="var(--accent-primary)" stroke-width="1.5" />
+                            <polygon points="85,32 80,29 80,35" fill="var(--accent-primary)" />
+                            
+                            <rect x="90" y="20" width="60" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--accent-primary)" />
+                            <text x="120" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">RAG Fetch</text>
+                            
+                            <path d="M 150,32 L 175,32" stroke="var(--accent-primary)" stroke-width="1.5" />
+                            <polygon points="175,32 170,29 170,35" fill="var(--accent-primary)" />
+                            
+                            <rect x="180" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="205" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">LLM Synth</text>
+                        </svg>
+                    </div>
                 </div>
-                <div class="glow-box" style="background: var(--bg-secondary); padding: 40px; border-radius: 15px; border-top: 3px solid var(--accent-primary);">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-white);"><i class="fa-solid fa-users" style="color: var(--accent-primary); margin-right: 10px;"></i>Our Team</h3>
-                    <p>We are a dedicated group of elite data scientists, machine learning engineers, and industry veterans committed to turning futuristic concepts into robust reality.</p>
+                <!-- Card 3 -->
+                <div class="expertise-card reveal delay-3">
+                    <div class="icon-wrapper" style="color: var(--accent-cyan);"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Agentic AI</h3>
+                    <p>Architecting multi-agent loops that formulate goals, query custom integrations, validate outputs, and run sandboxed routines autonomously.</p>
+                    <div class="expertise-tech">
+                        <h4>Technologies</h4>
+                        <div class="tech-pills">
+                            <span>LangGraph</span>
+                            <span>CrewAI</span>
+                            <span>AutoGen</span>
+                            <span>Python Async</span>
+                            <span>Docker Tools</span>
+                        </div>
+                    </div>
+                    <div class="mini-diagram">
+                        <svg viewBox="0 0 240 60" width="100%" height="100%">
+                            <rect x="10" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="35" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Orchestrate</text>
+                            
+                            <path d="M 60,26 L 85,15" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                            <path d="M 60,38 L 85,45" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                            
+                            <rect x="90" y="5" width="50" height="20" rx="4" fill="var(--bg-primary)" stroke="var(--accent-cyan)" />
+                            <text x="115" y="17" font-size="7" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Search Agent</text>
+                            
+                            <rect x="90" y="35" width="50" height="20" rx="4" fill="var(--bg-primary)" stroke="var(--accent-cyan)" />
+                            <text x="115" y="47" font-size="7" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Code Agent</text>
+                            
+                            <path d="M 140,15 L 175,28" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                            <path d="M 140,45 L 175,32" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                            
+                            <rect x="180" y="20" width="50" height="24" rx="4" fill="var(--bg-primary)" stroke="var(--border-subtle)" />
+                            <text x="205" y="34" font-size="8" fill="var(--text-white)" text-anchor="middle" font-family="monospace">Consensus</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- === 4. OUR APPROACH SECTION === -->
+    <section class="services" style="background: var(--bg-secondary); overflow: hidden; position: relative;">
+        <canvas id="services-bg-canvas"></canvas>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <span class="section-badge">Workflow</span>
+                <h2 class="section-title">Our Architecture Approach</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">How we design and deploy stable, production-ready AI environments.</p>
+            </div>
+            
+            <div class="approach-timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 01</div>
+                        <h3>Discovery & Architecture</h3>
+                        <p>We audit existing schemas, query frequencies, database structures, and workflow parameters to map a high-fidelity system architecture diagram and identify scaling bounds.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="timeline-item reveal delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 02</div>
+                        <h3>Data & Infrastructure Design</h3>
+                        <p>Constructing scalable lakehouse infrastructure using Delta Lake, configuring cloud instances (AWS/Azure), and setting up streaming endpoints like Kafka to feed clean data.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="timeline-item reveal delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 03</div>
+                        <h3>AI Model Integration</h3>
+                        <p>Deploying context-restricted foundation models, building optimized embedding indices, setting up vector database clusters (Qdrant/Milvus), and fine-tuning models on domain-specific assets.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="timeline-item reveal delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 04</div>
+                        <h3>Workflow Automation</h3>
+                        <p>Orchestrating autonomous multi-agent systems via LangGraph/CrewAI. We define clean state machines, routing criteria, sandboxed tools, and strict validation guardrails.</p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="timeline-item reveal delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 05</div>
+                        <h3>Deployment & Optimization</h3>
+                        <p>Moving workloads into production utilizing CI/CD pipelines and Docker/Kubernetes. We configure monitoring layers to track inference latency, API throughput, and context Drift.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 5. TECHNOLOGY STACK SECTION === -->
+    <section class="why-us" style="background: var(--bg-primary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="section-badge">Tech Stack</span>
+                <h2 class="section-title">Verified Technologies We Use</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">No experimental gimmicks. We engineer solutions using industry-standard platforms.</p>
+            </div>
+            
+            <div class="tech-stack-container">
+                <!-- Category 1 -->
+                <div class="tech-stack-card reveal">
+                    <h4>AI/ML Core</h4>
+                    <div class="tech-logo-list">
+                        <span class="tech-logo-item"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-microchip"></i> PyTorch</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-gears"></i> TensorFlow</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-chart-line"></i> Scikit-Learn</span>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div class="tech-stack-card reveal delay-1">
+                    <h4>GenAI Frame</h4>
+                    <div class="tech-logo-list">
+                        <span class="tech-logo-item"><i class="fa-solid fa-circle-nodes"></i> LangChain</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-code-branch"></i> LangGraph</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-magnifying-glass"></i> LlamaIndex</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-database"></i> Qdrant</span>
+                    </div>
+                </div>
+                <!-- Category 3 -->
+                <div class="tech-stack-card reveal delay-2">
+                    <h4>Data Platforms</h4>
+                    <div class="tech-logo-list">
+                        <span class="tech-logo-item"><i class="fa-solid fa-fire"></i> Apache Spark</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-cubes"></i> Databricks</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-network-wired"></i> Kafka</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-snowflake"></i> Snowflake</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-database"></i> dbt</span>
+                    </div>
+                </div>
+                <!-- Category 4 -->
+                <div class="tech-stack-card reveal delay-3">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="tech-logo-list">
+                        <span class="tech-logo-item"><i class="fa-brands fa-aws"></i> AWS</span>
+                        <span class="tech-logo-item"><i class="fa-brands fa-microsoft"></i> Azure</span>
+                        <span class="tech-logo-item"><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span class="tech-logo-item"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 6. WHY CHOOSE US SECTION === -->
+    <section class="why-us" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <span class="section-badge">Why Partner With Us</span>
+                <h2 class="section-title">Built for Production Scale</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">We focus strictly on the engineering aspects that matter for enterprise operations.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                <!-- Card 1 -->
+                <div class="service-card reveal delay-1">
+                    <div class="icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Enterprise AI Architectures</h3>
+                    <p>Designed with high availability (HA), decoupled computing/storage, and custom load-balancing layers to route LLM requests efficiently.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card reveal delay-2">
+                    <div class="icon-wrapper"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Scalable Cloud-Native Systems</h3>
+                    <p>Orchestrated with Docker containers and Kubernetes clusters, allowing AI agent servers and inference runners to scale auto-dynamically.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card reveal delay-3">
+                    <div class="icon-wrapper"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>End-to-End AI Development</h3>
+                    <p>Handling every layer of the lifecycle: raw stream collection, Lakehouse refining, model optimization, vector index design, and API serving.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card reveal delay-4">
+                    <div class="icon-wrapper"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Intelligent Automation Workflows</h3>
+                    <p>Deploying deterministic state-routing machines, self-evaluating loops, sandbox code compilers, and Human-in-the-Loop oversight portals.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card reveal delay-1">
+                    <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>High-Performance Data Platforms</h3>
+                    <p>Building high-speed metadata catalogs, delta lakes, and memory-cached query tables that feed context to models within milliseconds.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card reveal delay-2">
+                    <div class="icon-wrapper"><i class="fa-solid fa-arrow-turn-up"></i></div>
+                    <h3>Modern Deployment Pipelines</h3>
+                    <p>Utilizing Infrastructure as Code (Terraform), GitOps configuration syncing, and strict MLOps tracking tools to log and review model parameters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 7. ARCHITECTURE SHOWCASE SECTION === -->
+    <section class="why-us" style="background: var(--bg-primary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="section-badge">Showcase</span>
+                <h2 class="section-title">Reference Architectures</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Interactive diagrams showing how we structure enterprise pipelines.</p>
+            </div>
+            
+            <div class="showcase-tabs">
+                <button class="tab-btn active" data-target="diagram-rag">Hybrid RAG Architecture</button>
+                <button class="tab-btn" data-target="diagram-agent">Multi-Agent Loop</button>
+                <button class="tab-btn" data-target="diagram-data">Data Engineering Pipeline</button>
+                <button class="tab-btn" data-target="diagram-orch">AI Orchestration Flow</button>
+            </div>
+            
+            <div class="diagram-container">
+                <!-- RAG Diagram -->
+                <div class="diagram-pane active" id="diagram-rag">
+                    <svg viewBox="0 0 800 400" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="400" rx="16" fill="var(--bg-secondary)" stroke="var(--border-subtle)" stroke-width="1.5" />
+                        
+                        <!-- Input Sources -->
+                        <g transform="translate(40, 150)">
+                            <rect width="120" height="100" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="60" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Docs / APIs</text>
+                            <text x="60" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Unstructured Data</text>
+                            <text x="60" y="75" text-anchor="middle" font-size="9" fill="var(--accent-secondary)" font-family="monospace">Bronze Storage</text>
+                        </g>
+
+                        <!-- Connector -->
+                        <path d="M 160,200 L 220,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="220,200 212,195 212,205" fill="var(--accent-primary)" />
+
+                        <!-- Embedding Node -->
+                        <g transform="translate(220, 150)">
+                            <rect width="130" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-primary)" />
+                            <text x="65" y="30" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Embedding Pipe</text>
+                            <text x="65" y="50" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Text chunking</text>
+                            <text x="65" y="70" text-anchor="middle" font-size="9" fill="var(--text-light)" font-family="monospace">PyTorch / Voyage</text>
+                            <rect x="15" y="80" width="100" height="12" rx="2" fill="rgba(82,0,204,0.1)" />
+                            <text x="65" y="89" text-anchor="middle" font-size="7" fill="var(--accent-primary)" font-family="monospace">Vectorizing...</text>
+                        </g>
+
+                        <!-- Connector -->
+                        <path d="M 350,200 L 410,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="410,200 402,195 402,205" fill="var(--accent-primary)" />
+
+                        <!-- Vector Store -->
+                        <g transform="translate(410, 120)">
+                            <rect width="140" height="160" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="70" y="30" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Qdrant Vector DB</text>
+                            <text x="70" y="50" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Decoupled Index</text>
+                            
+                            <!-- Internal structures -->
+                            <rect x="15" y="65" width="110" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="70" y="80" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">HNSW Graph</text>
+                            
+                            <rect x="15" y="98" width="110" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="70" y="113" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">Payload Filter</text>
+
+                            <text x="70" y="145" text-anchor="middle" font-size="8" fill="var(--accent-cyan)" font-family="monospace">Latency < 12ms</text>
+                        </g>
+
+                        <!-- Connector -->
+                        <path d="M 550,200 L 610,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="610,200 602,195 602,205" fill="var(--accent-primary)" />
+
+                        <!-- LLM Synthesis -->
+                        <g transform="translate(610, 150)">
+                            <rect width="150" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-secondary)" />
+                            <text x="75" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">LLM Synthesis</text>
+                            <text x="75" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Context Alignment</text>
+                            <text x="75" y="75" text-anchor="middle" font-size="9" fill="var(--accent-secondary)" font-family="monospace">Claude-3.5-Sonnet</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <!-- Agent Diagram -->
+                <div class="diagram-pane" id="diagram-agent">
+                    <svg viewBox="0 0 800 400" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="400" rx="16" fill="var(--bg-secondary)" stroke="var(--border-subtle)" stroke-width="1.5" />
+                        
+                        <!-- Orchestrator -->
+                        <g transform="translate(80, 150)">
+                            <rect width="150" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-primary)" />
+                            <text x="75" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Orchestrator Node</text>
+                            <text x="75" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">LangGraph Agent</text>
+                            <text x="75" y="75" text-anchor="middle" font-size="9" fill="var(--accent-primary)" font-family="monospace">Goal Decomposition</text>
+                        </g>
+
+                        <!-- Connector lines going up and down -->
+                        <path d="M 230,170 L 320,80" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                        <path d="M 230,230 L 320,320" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                        
+                        <!-- Search Node -->
+                        <g transform="translate(320, 30)">
+                            <rect width="160" height="100" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="80" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Tavily Web Search</text>
+                            <text x="80" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Information Ingestion</text>
+                            <text x="80" y="75" text-anchor="middle" font-size="9" fill="var(--accent-cyan)" font-family="monospace">API Integration</text>
+                        </g>
+
+                        <!-- Code Node -->
+                        <g transform="translate(320, 270)">
+                            <rect width="160" height="100" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="80" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Python Engine</text>
+                            <text x="80" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Sandboxed Execution</text>
+                            <text x="80" y="75" text-anchor="middle" font-size="9" fill="var(--accent-cyan)" font-family="monospace">Docker Isolated</text>
+                        </g>
+
+                        <!-- Connections to validation -->
+                        <path d="M 480,80 L 570,170" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                        <path d="M 480,320 L 570,230" stroke="var(--accent-cyan)" stroke-width="1.5" />
+
+                        <!-- Guardrail / Output -->
+                        <g transform="translate(570, 150)">
+                            <rect width="150" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-secondary)" />
+                            <text x="75" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Guardrail Node</text>
+                            <text x="75" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Output Verification</text>
+                            <text x="75" y="75" text-anchor="middle" font-size="9" fill="var(--accent-secondary)" font-family="monospace">Llama Guard Evaluator</text>
+                        </g>
+
+                        <!-- Loop back line -->
+                        <path d="M 645,150 L 645,10 L 155,10 L 155,150" stroke="var(--accent-primary)" stroke-width="1" stroke-dasharray="4,4" />
+                        <text x="400" y="24" text-anchor="middle" font-size="8" fill="var(--accent-primary)" font-family="monospace">RE-PLANNING LOOP IF VALIDATION FAILS</text>
+                    </svg>
+                </div>
+                
+                <!-- Data Diagram -->
+                <div class="diagram-pane" id="diagram-data">
+                    <svg viewBox="0 0 800 400" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="400" rx="16" fill="var(--bg-secondary)" stroke="var(--border-subtle)" stroke-width="1.5" />
+                        
+                        <!-- Stream Event -->
+                        <g transform="translate(30, 150)">
+                            <rect width="120" height="100" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="60" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Kafka Broker</text>
+                            <text x="60" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Real-Time Streams</text>
+                            <text x="60" y="75" text-anchor="middle" font-size="9" fill="var(--text-light)" font-family="monospace">100K msg/sec</text>
+                        </g>
+
+                        <path d="M 150,200 L 200,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="200,200 192,195 192,205" fill="var(--accent-primary)" />
+
+                        <!-- Spark Ingestion -->
+                        <g transform="translate(200, 150)">
+                            <rect width="140" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-primary)" />
+                            <text x="70" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Spark Stream Ingest</text>
+                            <text x="70" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Bronze Delta Write</text>
+                            <text x="70" y="75" text-anchor="middle" font-size="9" fill="var(--accent-primary)" font-family="monospace">Auto Loader Engine</text>
+                        </g>
+
+                        <path d="M 340,200 L 390,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="390,200 382,195 382,205" fill="var(--accent-primary)" />
+
+                        <!-- dbt Silver -->
+                        <g transform="translate(390, 150)">
+                            <rect width="140" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-primary)" />
+                            <text x="70" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">dbt Silver Refining</text>
+                            <text x="70" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Cleaning & Schema enforcement</text>
+                            <text x="70" y="75" text-anchor="middle" font-size="9" fill="var(--accent-primary)" font-family="monospace">dbt Core Model</text>
+                        </g>
+
+                        <path d="M 530,200 L 580,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="580,200 572,195 572,205" fill="var(--accent-primary)" />
+
+                        <!-- Databricks Serving -->
+                        <g transform="translate(580, 120)">
+                            <rect width="180" height="160" rx="8" fill="var(--bg-card)" stroke="var(--accent-secondary)" />
+                            <text x="90" y="30" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Gold Catalog Serving</text>
+                            <text x="90" y="50" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Aggregated Analytics</text>
+                            
+                            <rect x="15" y="70" width="150" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="90" y="85" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">Databricks SQL serving</text>
+                            
+                            <rect x="15" y="105" width="150" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="90" y="120" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">Unity Catalog Access Control</text>
+
+                            <text x="90" y="148" text-anchor="middle" font-size="8" fill="var(--accent-cyan)" font-family="monospace">Production Lakehouse</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <!-- Orchestration Diagram -->
+                <div class="diagram-pane" id="diagram-orch">
+                    <svg viewBox="0 0 800 400" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="400" rx="16" fill="var(--bg-secondary)" stroke="var(--border-subtle)" stroke-width="1.5" />
+                        
+                        <!-- API Gateway -->
+                        <g transform="translate(40, 150)">
+                            <rect width="130" height="100" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="65" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">APIGateway / FastAPI</text>
+                            <text x="65" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">JSON Request Intake</text>
+                            <text x="65" y="75" text-anchor="middle" font-size="9" fill="var(--accent-primary)" font-family="monospace">CORS / Rate limits</text>
+                        </g>
+
+                        <path d="M 170,200 L 230,200" stroke="var(--accent-primary)" stroke-width="2" />
+                        <polygon points="230,200 222,195 222,205" fill="var(--accent-primary)" />
+
+                        <!-- Model Router -->
+                        <g transform="translate(230, 120)">
+                            <rect width="150" height="160" rx="8" fill="var(--bg-card)" stroke="var(--accent-primary)" />
+                            <text x="75" y="30" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Dynamic Router</text>
+                            
+                            <rect x="15" y="55" width="120" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="75" y="70" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">Complexity assessment</text>
+                            
+                            <rect x="15" y="90" width="120" height="24" rx="4" fill="var(--bg-secondary)" stroke="var(--border-subtle)" />
+                            <text x="75" y="105" text-anchor="middle" font-size="9" fill="var(--text-white)" font-family="monospace">Token cost projection</text>
+
+                            <text x="75" y="145" text-anchor="middle" font-size="8" fill="var(--accent-cyan)" font-family="monospace">Auto Model Selection</text>
+                        </g>
+
+                        <!-- Connector lines split -->
+                        <path d="M 380,180 L 450,110" stroke="var(--accent-primary)" stroke-width="1.5" />
+                        <path d="M 380,220 L 450,290" stroke="var(--accent-primary)" stroke-width="1.5" />
+
+                        <!-- Fast Model path -->
+                        <g transform="translate(450, 60)">
+                            <rect width="140" height="80" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="70" y="35" text-anchor="middle" font-size="11" fill="var(--text-white)" font-weight="700" font-family="Inter">Llama-3-8B-Instruct</text>
+                            <text x="70" y="55" text-anchor="middle" font-size="9" fill="var(--text-gray)" font-family="Inter">Low cost / Fast routing</text>
+                        </g>
+
+                        <!-- Complex Model path -->
+                        <g transform="translate(450, 260)">
+                            <rect width="140" height="80" rx="8" fill="var(--bg-card)" stroke="var(--border-subtle)" />
+                            <text x="70" y="35" text-anchor="middle" font-size="11" fill="var(--text-white)" font-weight="700" font-family="Inter">Claude 3.5 Sonnet</text>
+                            <text x="70" y="55" text-anchor="middle" font-size="9" fill="var(--text-gray)" font-family="Inter">High reasoning path</text>
+                        </g>
+
+                        <path d="M 590,100 L 660,180" stroke="var(--accent-primary)" stroke-width="1.5" />
+                        <path d="M 590,300 L 660,220" stroke="var(--accent-primary)" stroke-width="1.5" />
+
+                        <!-- Evaluation Layer -->
+                        <g transform="translate(660, 150)">
+                            <rect width="110" height="100" rx="8" fill="var(--bg-card)" stroke="var(--accent-secondary)" />
+                            <text x="55" y="35" text-anchor="middle" font-size="12" fill="var(--text-white)" font-weight="700" font-family="Inter">Eval / Guard</text>
+                            <text x="55" y="55" text-anchor="middle" font-size="10" fill="var(--text-gray)" font-family="Inter">Strict output checks</text>
+                            <text x="55" y="75" text-anchor="middle" font-size="8" fill="var(--accent-secondary)" font-family="monospace">Semantic check</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 8. COMPANY VALUES SECTION === -->
+    <section class="why-us" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-badge">Principles</span>
+                <h2 class="section-title">Our Engineering Principles</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">No shortcuts. We follow foundational engineering values in every deployment.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px;">
+                <div class="expertise-card reveal" style="padding: 30px;">
+                    <h3>Engineering Excellence</h3>
+                    <p style="font-size: 0.9rem;">We write clean, documented, reproducible code. Our pipelines are built to be maintained easily by internal enterprise developers.</p>
+                </div>
+                <div class="expertise-card reveal delay-1" style="padding: 30px;">
+                    <h3>Scalability First</h3>
+                    <p style="font-size: 0.9rem;">No hardcoded variables. We decouple compute from storage and design networks that handle massive scale changes naturally.</p>
+                </div>
+                <div class="expertise-card reveal delay-2" style="padding: 30px;">
+                    <h3>Operational Reliability</h3>
+                    <p style="font-size: 0.9rem;">We implement rigorous error-handling loops, schema validation layers, model guardrails, and automated failover points.</p>
+                </div>
+                <div class="expertise-card reveal delay-3" style="padding: 30px;">
+                    <h3>Sovereign Privacy</h3>
+                    <p style="font-size: 0.9rem;">We construct VPC/isolated network models to keep customer context secure, avoiding public-facing data leaks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 10. STATISTICS SECTION === -->
+    <section class="value-prop" style="background: var(--bg-primary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-badge">Proven Metrics</span>
+                <h2 class="section-title">Verified System Metrics</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card reveal">
+                    <span class="stat-number counter" data-target="15">0</span><span class="stat-number">+</span>
+                    <div class="stat-label">Enterprise AI Solutions Built</div>
+                </div>
+                <div class="stat-card reveal delay-1">
+                    <span class="stat-number counter" data-target="40">0</span><span class="stat-number">+</span>
+                    <div class="stat-label">High-Throughput Pipelines</div>
+                </div>
+                <div class="stat-card reveal delay-2">
+                    <span class="stat-number counter" data-target="500">0</span><span class="stat-number">M+</span>
+                    <div class="stat-label">Daily Data Records Processed</div>
+                </div>
+                <div class="stat-card reveal delay-3">
+                    <span class="stat-number counter" data-target="99">0</span><span class="stat-number">.95%</span>
+                    <div class="stat-label">Production System Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === 11. TEAM SECTION === -->
+    <section class="why-us" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="section-badge">Credentials</span>
+                <h2 class="section-title">Engineering-Focused AI Solutions Team</h2>
+                <p class="section-subtitle" style="margin: 0 auto; max-width: 700px;">Our team consists of senior data architects, AI systems researchers, and MLOps veterans. Rather than showcasing generic avatars, we lead with our technical execution credentials.</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 50px auto 0; display: flex; flex-direction: column; gap: 20px;">
+                <div class="expertise-card reveal" style="flex-direction: row; align-items: center; gap: 24px; padding: 24px; flex-wrap: wrap;">
+                    <div class="icon-wrapper" style="margin-bottom: 0; width: 60px; height: 60px; font-size: 1.6rem;"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="color: var(--text-white); font-size: 1.1rem; font-weight: 700;">Elite Academic & System Backgrounds</h4>
+                        <p style="font-size: 0.9rem; margin-top: 4px; margin-bottom: 0; color: var(--text-gray);">Our architects have previously engineered high-speed trading cores, large-scale search infrastructure, and stream ingestion engines at enterprise scale.</p>
+                    </div>
+                </div>
+                <div class="expertise-card reveal delay-1" style="flex-direction: row; align-items: center; gap: 24px; padding: 24px; flex-wrap: wrap;">
+                    <div class="icon-wrapper" style="margin-bottom: 0; width: 60px; height: 60px; font-size: 1.6rem;"><i class="fa-solid fa-award"></i></div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="color: var(--text-white); font-size: 1.1rem; font-weight: 700;">Certified Databricks & Cloud Architects</h4>
+                        <p style="font-size: 0.9rem; margin-top: 4px; margin-bottom: 0; color: var(--text-gray);">We hold professional-grade certifications in Apache Spark systems tuning, Databricks governance, AWS analytics orchestration, and Azure DevOps integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === FOOTER === -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

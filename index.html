@@ -7,11 +7,16 @@
     <meta name="description" content="AIML Labs — Empowering the future with Machine Learning, Gen AI, and Agentic AI solutions for global enterprises.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=2.3">
 </head>
-<body>
+<body class="page-fade-in">
+    <script>
+        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.body.classList.add('light-theme');
+        }
+    </script>
 
     <!-- === NAVBAR === -->
     <header class="navbar">
@@ -28,6 +33,9 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
         </div>
@@ -38,14 +46,13 @@
         <canvas id="particle-canvas"></canvas>
         <div class="hero-scanline"></div>
         <div class="container hero-split">
-            <!-- LEFT: Text Content with typing effect -->
+            <!-- LEFT: Text Content -->
             <div class="hero-left">
-                <div class="hero-eyebrow reveal"><span class="dot"></span> AI-Powered Innovation</div>
+                <div class="hero-eyebrow reveal"><span class="dot"></span> Enterprise AI Partner</div>
                 <h1 class="hero-title reveal delay-1">
-                    Empowering<br>The Future With<br>
-                    <span class="line2" id="typed-text"></span><span class="typed-cursor">|</span>
+                    Enterprise AI Solutions with <span class="line2">GenAI, Agentic AI & Data Engineering</span>
                 </h1>
-                <p class="hero-subtitle reveal delay-2">AIML Labs specialises in developing cutting-edge AI technology, transforming processes for a wide range of global industries.</p>
+                <p class="hero-subtitle reveal delay-2">Building scalable AI systems, intelligent automation, and modern data platforms that drive measurable business impact.</p>
                 <div class="hero-actions reveal delay-3">
                     <a href="services.html" class="btn btn-primary btn-large">Explore Now</a>
                     <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
@@ -93,13 +100,14 @@
     </section>
 
     <!-- === SECTION 3: SERVICES GRID === -->
-    <section class="services">
+    <section class="services" id="services">
+        <canvas id="services-bg-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <div class="sh-left">
-                    <span class="section-badge">What We Do</span>
-                    <h2 class="section-title">Explore Best AI Services</h2>
-                    <p class="section-subtitle">Discover how our specialised Gen AI and Data Science integrations can optimise your workflow.</p>
+                    <span class="section-badge">Capabilities</span>
+                    <h2 class="section-title">Core AI & Data Services</h2>
+                    <p class="section-subtitle">Premium end-to-end expertise designed to unlock scalable, enterprise-grade capabilities.</p>
                 </div>
                 <div class="sh-right">
                     <a href="services.html" class="btn btn-outline">All Services</a>
@@ -107,28 +115,22 @@
             </div>
             <div class="services-grid">
                 <div class="service-card reveal delay-1">
-                    <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-                    <h3>Machine Learning</h3>
-                    <p>Build scalable predictive models that continuously learn and adapt to changing data environments.</p>
-                    <a href="services.html" class="read-more">Read More</a>
+                    <div class="icon-wrapper"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Generative AI</h3>
+                    <p>Custom LLM integrations, retrieval-augmented generation (RAG) pipelines, and enterprise-grade fine-tuning. Deploy secure generative models that safely query private repositories.</p>
+                    <a href="services.html" class="read-more">Learn More</a>
                 </div>
                 <div class="service-card reveal delay-2">
-                    <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
-                    <h3>Data Science</h3>
-                    <p>Advanced analytics and data processing to transform your raw data into actionable intelligence.</p>
-                    <a href="services.html" class="read-more">Read More</a>
-                </div>
-                <div class="service-card reveal delay-3">
-                    <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
-                    <h3>Gen AI</h3>
-                    <p>Leverage generative models for automated content creation, design, and complex problem solving.</p>
-                    <a href="services.html" class="read-more">Read More</a>
-                </div>
-                <div class="service-card reveal delay-4">
                     <div class="icon-wrapper"><i class="fa-solid fa-robot"></i></div>
                     <h3>Agentic AI</h3>
-                    <p>Autonomous AI agents that can reason, plan, and execute multi-step workflows seamlessly.</p>
-                    <a href="services.html" class="read-more">Read More</a>
+                    <p>Autonomous multi-agent swarms capable of planning, tool-use, and self-correction. We design intelligent agents that handle complex end-to-end operational workflows.</p>
+                    <a href="services.html" class="read-more">Learn More</a>
+                </div>
+                <div class="service-card reveal delay-3">
+                    <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p>High-throughput stream processing, robust ETL pipelines, and modern lakehouse architectures (Delta Lake/Databricks) serving as the high-fidelity foundation for AI systems.</p>
+                    <a href="services.html" class="read-more">Learn More</a>
                 </div>
             </div>
         </div>
