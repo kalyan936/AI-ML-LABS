@@ -3,7 +3,7 @@
    2K-Ready | Particle FX | Premium Animations
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
     --bg-primary: #0B0F19;
@@ -18,8 +18,8 @@
     --text-white: #FFFFFF;
     --text-gray: #94a3b8;
     --text-light: #cbd5e1;
-    --font-heading: 'Inter', 'Geist', 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-body: 'Inter', 'Geist', 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', 'Inter', 'Geist', 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --border-subtle: rgba(255, 255, 255, 0.06);
     --border-purple: rgba(82, 0, 204, 0.3);
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -233,7 +233,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     min-height: 100vh;
     display: flex; align-items: center;
     position: relative; overflow: hidden;
-    padding: 80px 0;
+    padding: 60px 0;
     background: var(--bg-primary);
 }
 
@@ -432,7 +432,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 }
 
 /* ===================== VALUE PROP ===================== */
-.value-prop { position: relative; z-index: 5; background: var(--bg-primary); padding: 120px 0; }
+.value-prop { position: relative; z-index: 5; background: var(--bg-primary); padding: 85px 0; }
 .vp-container { display:flex; align-items:center; gap:80px; }
 .vp-left,.vp-right { flex:1; }
 .vp-right p { margin-bottom:28px; font-size:1.08rem; color:var(--text-light); }
@@ -452,7 +452,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .stat-label { font-size:0.82rem; color:var(--text-gray); text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
 
 /* ===================== SERVICES ===================== */
-.services { padding:140px 0; background:var(--bg-secondary); position:relative; z-index: 5; overflow:hidden; }
+.services { padding:75px 0; background:var(--bg-secondary); position:relative; z-index: 5; overflow:hidden; }
 .services::before {
     content:''; position:absolute; top:-50%; right:-10%;
     width:500px; height:500px;
@@ -514,7 +514,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .service-card:hover .read-more::after { transform:translateX(6px); }
 
 /* ===================== PROJECTS / INDUSTRIES ===================== */
-.projects { position: relative; z-index: 5; background: var(--bg-primary); padding:140px 0; }
+.projects { position: relative; z-index: 5; background: var(--bg-primary); padding:75px 0; }
 .projects-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; margin-top:60px; }
 
 .project-card {
@@ -543,7 +543,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .btn-link:hover { color:var(--accent-secondary); }
 
 /* ===================== TESTIMONIALS ===================== */
-.testimonials { position: relative; z-index: 5; padding:140px 0; background:var(--bg-secondary); }
+.testimonials { position: relative; z-index: 5; padding:75px 0; background:var(--bg-secondary); }
 .test-container { display:flex; gap:80px; align-items:flex-start; }
 .test-left { flex:1; max-width:380px; }
 .test-right { flex:2; }
@@ -577,7 +577,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .user-info span { font-size:0.8rem; color:var(--accent-secondary); }
 
 /* ===================== CTA BANNER ===================== */
-.cta-banner { position: relative; z-index: 5; background: var(--bg-primary); padding:140px 0; }
+.cta-banner { position: relative; z-index: 5; background: var(--bg-primary); padding:75px 0; }
 .cta-container {
     background: linear-gradient(135deg, rgba(11,15,25,0.9) 0%, rgba(82,0,204,0.18) 100%);
     border:1px solid var(--accent-primary);
@@ -603,7 +603,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* ===================== PAGE HEADER ===================== */
 .page-header {
-    padding:140px 0 80px; text-align:center;
+    padding:70px 0 35px; text-align:center;
     background: radial-gradient(ellipse at center, rgba(82,0,204,0.1) 0%, transparent 65%);
     position:relative; overflow:hidden;
 }
@@ -615,7 +615,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 }
 
 /* ===================== CONTACT FORM ===================== */
-.contact-section { padding:80px 0 120px; }
+.contact-section { padding:40px 0 80px; }
 .contact-info { color:var(--text-light); }
 .contact-info a { color:var(--accent-secondary); }
 .contact-info a:hover { text-shadow:0 0 12px var(--accent-secondary-glow); }
@@ -684,14 +684,14 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     position: relative;
     z-index: 5;
     background: var(--bg-primary);
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 /* ===================== ABOUT PAGE ===================== */
 .about-details { padding-bottom:120px; }
 
 /* ===================== SERVICES PAGE ===================== */
-.methodology { padding:100px 0; }
+.methodology { padding:75px 0; }
 
 /* ===================== MISC ===================== */
 .hover-lift { transition:var(--transition); }
@@ -862,7 +862,7 @@ body.light-theme .footer-bottom {
 /* ===================== ABOUT PAGE CUSTOM ENTERPRISE STYLES ===================== */
 .about-hero {
     position: relative;
-    padding: 160px 0 120px;
+    padding: 95px 0 55px;
     background: var(--bg-primary);
     overflow: hidden;
 }
