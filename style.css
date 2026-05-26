@@ -317,7 +317,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     position: absolute;
     bottom: 0;         /* Sits flush at the very bottom of the hero section */
     left: 50%;
-    transform: translateX(calc(-50% + 96px)); /* Centered and shifted 1 inch right */
+    transform: translateX(calc(-50% + 192px)); /* Centered and shifted 2 inches right */
     z-index: 1;        /* Sits behind the text grids but in front of the background */
     
     /* Display behavior */
