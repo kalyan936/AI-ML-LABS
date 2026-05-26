@@ -281,16 +281,64 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* RIGHT — robot image with eye overlays */
 .hero-right {
-    flex: 1; max-width: 480px;
+    flex: 1.25; max-width: 580px;
     position: relative;
     display: flex; justify-content: center; align-items: center;
 }
 
 .hero-robot-img {
-    width: 100%; max-width: 400px; height: auto;
+    width: 100%; max-width: 520px; height: auto;
     filter: drop-shadow(0 0 40px rgba(82,0,204,0.3));
     position: relative; z-index: 2;
     display: block;
+}
+
+/* Floating HUD elements around robot face */
+.hud-element {
+    position: absolute;
+    background: rgba(11, 15, 25, 0.82);
+    border: 1px solid var(--accent-cyan);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+    letter-spacing: 1px;
+    opacity: 0.9;
+    transition: var(--transition);
+}
+.hud-glow-dot {
+    width: 6px; height: 6px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-cyan);
+    animation: hud-pulse 1.5s infinite;
+}
+@keyframes hud-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.25); }
+}
+.hud-top-left {
+    top: 15%; left: -20px;
+    animation: float 6s ease-in-out infinite;
+}
+.hud-top-right {
+    top: 25%; right: -20px;
+    animation: float 7s ease-in-out infinite reverse;
+}
+.hud-bottom-left {
+    bottom: 30%; left: -40px;
+    animation: float 8s ease-in-out infinite 1s;
+}
+.hud-bottom-right {
+    bottom: 15%; right: -30px;
+    animation: float 9s ease-in-out infinite 0.5s reverse;
 }
 
 /* Robot Wrapper for Watermark Glow & Blending Mask */
@@ -326,7 +374,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* Decorative ring around robot */
 .glow-orb {
-    position: absolute; width: 360px; height: 360px;
+    position: absolute; width: 480px; height: 480px;
     background: radial-gradient(circle, rgba(82,0,204,0.15) 0%, transparent 70%);
     top: 50%; left: 50%; transform: translate(-50%,-50%);
     z-index: 0; border-radius: 50%;
@@ -334,7 +382,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 }
 .hero-ring {
     position: absolute; top: 50%; left: 50%;
-    width: 420px; height: 420px;
+    width: 540px; height: 540px;
     border: 1px dashed rgba(82,0,204,0.15);
     border-radius: 50%;
     transform: translate(-50%,-50%);
