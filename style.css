@@ -343,6 +343,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     width: 100%;
     max-width: 1012px;  /* Keeps the head proportionally sized on large screens */
     height: auto;
+    max-height: 82vh;   /* Limit height to prevent cutting off the head */
     
     /* Positioning */
     position: absolute;
@@ -703,6 +704,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 @media (max-width: 1500px) {
     .hero-robot-image {
         max-width: 820px;
+        max-height: 80vh;  /* Limit height on laptops */
         right: -80px;      /* Shift slightly right on laptops to prevent text overlap */
         left: auto;
         transform: none;
@@ -717,6 +719,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     .test-left     { max-width:100%; }
     .hero-robot-image {
         max-width: 720px;
+        max-height: 75vh;  /* Limit height further on smaller laptop viewports */
         right: -100px;     /* Shift further right on narrower laptop viewports */
         left: auto;
         transform: none;
