@@ -231,9 +231,9 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 /* ===================== HERO — SPLIT LAYOUT ===================== */
 .hero {
     min-height: calc(100vh - 75px);
-    display: flex; align-items: center;
+    display: flex; align-items: flex-start;
     position: relative; overflow: hidden;
-    padding: 20px 0;
+    padding: 50px 0;
     background: var(--bg-primary);
 }
 
