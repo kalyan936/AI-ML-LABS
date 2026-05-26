@@ -307,14 +307,23 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     pointer-events: auto;
 }
 
-.hero-robot-img {
-    height: 100vh;
-    width: auto;
-    max-height: 100%;
+.hero-robot-image {
+    /* Dimensions */
+    width: 100%;
+    max-width: 680px;  /* Keeps the head proportionally sized on large screens */
+    height: auto;
+    
+    /* Positioning */
+    position: absolute;
+    bottom: 0;         /* Sits flush at the very bottom of the hero section */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the robot perfectly in the viewport */
+    z-index: 1;        /* Sits behind the text grids but in front of the background */
+    
+    /* Display behavior */
     object-fit: contain;
-    filter: drop-shadow(0 0 50px rgba(82,0,204,0.25));
-    position: relative;
-    z-index: 2;
+    pointer-events: none; /* Allows users to click through the image if needed */
+    filter: drop-shadow(0 0 50px rgba(82,0,204,0.25)); /* Theme glowing aura */
     display: block;
 }
 
@@ -671,7 +680,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
         align-items: center;
         margin: 40px auto;
     }
-    .hero-robot-img {
+    .hero-robot-image {
         height: auto;
         width: 100%;
         max-width: 320px;
