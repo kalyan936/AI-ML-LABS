@@ -281,13 +281,13 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* RIGHT — robot image with eye overlays */
 .hero-right {
-    flex: 1.25; max-width: 580px;
+    flex: 1.4; max-width: 680px;
     position: relative;
     display: flex; justify-content: center; align-items: center;
 }
 
 .hero-robot-img {
-    width: 100%; max-width: 520px; height: auto;
+    width: 100%; max-width: 600px; height: auto;
     filter: drop-shadow(0 0 40px rgba(82,0,204,0.3));
     position: relative; z-index: 2;
     display: block;
@@ -325,30 +325,29 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
     50% { opacity: 1; transform: scale(1.25); }
 }
 .hud-top-left {
-    top: 15%; left: -20px;
+    top: 15%; left: -40px;
     animation: float 6s ease-in-out infinite;
 }
 .hud-top-right {
-    top: 25%; right: -20px;
+    top: 25%; right: -40px;
     animation: float 7s ease-in-out infinite reverse;
 }
 .hud-bottom-left {
-    bottom: 30%; left: -40px;
+    bottom: 30%; left: -60px;
     animation: float 8s ease-in-out infinite 1s;
 }
 .hud-bottom-right {
-    bottom: 15%; right: -30px;
+    bottom: 15%; right: -50px;
     animation: float 9s ease-in-out infinite 0.5s reverse;
 }
 
-/* Robot Wrapper for Watermark Glow & Blending Mask */
+/* Robot Wrapper for Watermark Glow - Clean Rounded Box without Mask Blending */
 .robot-wrapper {
     position: relative;
     display: inline-block;
+    border-radius: 24px;
+    overflow: hidden;
     z-index: 2;
-    /* Soft radial mask to blend image and cursor glow smoothly into page background */
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
-    mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
 }
 
 /* Watermark cursor follower */
@@ -374,7 +373,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* Decorative ring around robot */
 .glow-orb {
-    position: absolute; width: 480px; height: 480px;
+    position: absolute; width: 540px; height: 540px;
     background: radial-gradient(circle, rgba(82,0,204,0.15) 0%, transparent 70%);
     top: 50%; left: 50%; transform: translate(-50%,-50%);
     z-index: 0; border-radius: 50%;
@@ -382,7 +381,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 }
 .hero-ring {
     position: absolute; top: 50%; left: 50%;
-    width: 540px; height: 540px;
+    width: 620px; height: 620px;
     border: 1px dashed rgba(82,0,204,0.15);
     border-radius: 50%;
     transform: translate(-50%,-50%);
