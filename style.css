@@ -288,19 +288,19 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 .hero-robot-img {
     width: 100%; max-width: 400px; height: auto;
-    border-radius: 20px;
     filter: drop-shadow(0 0 40px rgba(82,0,204,0.3));
     position: relative; z-index: 2;
     display: block;
 }
 
-/* Robot Wrapper for Watermark Glow */
+/* Robot Wrapper for Watermark Glow & Blending Mask */
 .robot-wrapper {
     position: relative;
     display: inline-block;
-    border-radius: 20px;
-    overflow: hidden;
     z-index: 2;
+    /* Soft radial mask to blend image and cursor glow smoothly into page background */
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
 }
 
 /* Watermark cursor follower */
