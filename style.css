@@ -341,14 +341,14 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .hero-robot-image {
     /* Dimensions */
     width: 100%;
-    max-width: 1012px;  /* Increased by 2 inches (192px) */
+    max-width: 1012px;  /* Keeps the head proportionally sized on large screens */
     height: auto;
     
     /* Positioning */
     position: absolute;
     bottom: 0;         /* Sits flush at the very bottom of the hero section */
     left: 50%;
-    transform: translateX(calc(-50% + 384px)); /* Shifted another 2 inches (384px total) right */
+    transform: translateX(calc(-50% + 160px)); /* Brought closer to text to remove empty spacing */
     z-index: 1;        /* Sits behind the text grids but in front of the background */
     
     /* Display behavior */
